@@ -1,0 +1,57 @@
+
+
+# @name editor_login
+POST http://127.0.0.1:3001/rpc/login
+Content-Type: application/json
+
+{
+    "email" : "editor@beis.gov.uk",
+    "password" : "Password1!"
+}
+
+###
+
+# @name do_publish
+
+@editor_jwt = {{editor_login.response.body.$.signed_jwt}}
+
+
+POST http://127.0.0.1:3001/rpc/publish_orpml
+Content-Type: application/json
+Authorization: Bearer {{editor_jwt}}
+
+{
+    "document" : {
+        "guidance_identifier": "",
+        "guidance_element": "this is some guidance",
+        "laid_pursuant_to": [{
+            "document_key": "upkga/2020/01",
+            "document_extent": null
+        }],
+        "created_on": "2021-08-01",
+        "valid_from": "2021-08-01"
+    }
+}
+
+###
+
+# @name do_bad_publish
+
+@editor_jwt = {{editor_login.response.body.$.signed_jwt}}
+
+
+POST http://127.0.0.1:3001/rpc/publish_orpml
+Content-Type: application/json
+Authorization: Bearer {{editor_jwt}}
+
+{
+    "document" : {
+        "guidance_identifier": "",
+        "guidance_element": "this is some guidance",
+        "laid_pursuant_to": [{
+            "document_key": "upkga/2020/01",
+            "document_extent": null
+        }]
+    }
+}
+

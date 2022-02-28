@@ -1,0 +1,117 @@
+
+# @name failed_login
+POST http://127.0.0.1:3001/rpc/login
+Content-Type: application/json
+
+{
+    "email" : "admin@beis.gov.uk",
+    "password" : "asdfasdf"
+}
+
+###
+
+# @name admin_login
+POST http://127.0.0.1:3001/rpc/login
+Content-Type: application/json
+
+{
+    "email" : "admin@beis.gov.uk",
+    "password" : "Password1!"
+}
+
+###
+
+# @name editor_login
+POST http://127.0.0.1:3001/rpc/login
+Content-Type: application/json
+
+{
+    "email" : "editor@beis.gov.uk",
+    "password" : "Password1!"
+}
+
+###
+
+# @name admin_user_info
+GET http://127.0.0.1:3001/user_info
+Content-Type: application/json
+Authorization: Bearer {{admin_jwt}}
+
+###
+
+# @name editor_user_info
+GET http://127.0.0.1:3001/user_info
+Content-Type: application/json
+Authorization: Bearer {{editor_jwt}}
+
+###
+
+@admin_jwt = {{admin_login.response.body.$.signed_jwt}}
+@editor_jwt = {{editor_login.response.body.$.signed_jwt}}
+
+# @name one_doc
+GET http://127.0.0.1:3001/document
+    ?select=document_id:id,created_on,revision_number,primary_key:pk,document_type(id,name),related_documents:document_graph!document_id_a(document_id_b,relationship_properties),reverse_related_documents:document_graph!document_id_b(document_id_a,relationship_properties),document_metadata:document_metadata_view(data,category,name,distinct_metadata_id),document_enrichments:enrichment(id,data,extent,enrichment_def(id,name),enrichment_feedback(good,notes,user_info(first_name,last_name,email))))
+    &id=eq.1
+    &document_metadata_view.category=in.(title,longtitle,enacted,identification,classification,named_entities,html)
+Content-Type: application/json
+Accept: application/vnd.pgrst.object+json
+Authorization: Bearer {{admin_jwt}}
+
+###
+
+# @name first_ten_doc
+GET http://127.0.0.1:3001/docs_with_outstanding_feedback
+    ?select=document_id:id,created_on,revision_number,primary_key:pk,document_type(id,name),related_documents:document_graph!document_id_a(document_id_b,relationship_properties),reverse_related_documents:document_graph!document_id_b(document_id_a,relationship_properties),document_metadata:document_metadata_view(data,category,name,distinct_metadata_id),document_enrichments:enrichment(id,data,extent,enrichment_def(id,name),enrichment_feedback(good,notes,user_info(first_name,last_name,email))))
+    &document_metadata_view.category=in.(title,longtitle,enacted,identification,classification,named_entities,html)
+Content-Type: application/json
+Accept: application/json
+Authorization: Bearer {{admin_jwt}}
+Range-Unit: items
+Range: 0-9
+
+###
+
+# @enrichment_def_id = {{one_doc.response.body.$.document_enrichments[0].enrichment_def.id}}
+@enrichment_id = {{one_doc.response.body.$.document_enrichments[0].id}}
+
+# @name editor_feedback
+POST http://127.0.0.1:3001/enrichment_feedback
+Content-Type: application/json
+Accept: application/json
+Authorization: Bearer {{editor_jwt}}
+
+{
+    "enrichment_id" : {{enrichment_id}},
+    "good" : true,
+    "notes" : "some feedback notes"
+}
+
+###
+
+# @name admin_feedback
+POST http://127.0.0.1:3001/enrichment_feedback
+Content-Type: application/json
+Accept: application/json
+Authorization: Bearer {{admin_jwt}}
+
+{
+    "enrichment_id" : {{enrichment_id}},
+    "good" : true,
+    "notes" : "some feedback notes"
+}
+
+###
+
+# @name simple_search
+POST http://127.0.0.1:3001/rpc/document_search
+Content-Type: application/json
+Accept: application/json
+Authorization: Bearer {{admin_jwt}}
+
+{
+    "search_query" : "maternity pay",
+    "document_type_ids" : [1]
+}
+
+###

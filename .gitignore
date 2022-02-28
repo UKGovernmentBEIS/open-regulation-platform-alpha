@@ -1,0 +1,10 @@
+env/
+*.pyc
+/test.txt
+data/**/**/*.xml
+data/**/**/*.error
+.idea/*
+node_modules
+terraform/id_rsa*
+terraform/.terraform*
+terraform/*.tfvars

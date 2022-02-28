@@ -1,0 +1,37 @@
+
+# @name editor_login
+POST http://127.0.0.1:3001/rpc/login
+Content-Type: application/json
+
+{
+    "email" : "editor@beis.gov.uk",
+    "password" : "Password1!"
+}
+
+###
+@editor_jwt = {{editor_login.response.body.$.signed_jwt}}
+
+# @name get_ner_id
+
+GET http://127.0.0.1:3001/document_metadata_definition
+    ?select=id
+    &name=eq.legislation_named_entities
+Content-Type: application/json
+Authorization: Bearer {{editor_jwt}}
+Accept: application/vnd.pgrst.object+json
+
+@ner_id = {{get_ner_id.response.body.id}}
+
+###
+
+# @name named_entities
+
+GET http://127.0.0.1:3001/distinct_document_metadata
+    ?select=id,data
+    &document_metadata_definition_id=eq.{{ner_id}}
+Content-Type: application/json
+Authorization: Bearer {{editor_jwt}}
+Range-Unit: items
+Range: 0-9
+
+###

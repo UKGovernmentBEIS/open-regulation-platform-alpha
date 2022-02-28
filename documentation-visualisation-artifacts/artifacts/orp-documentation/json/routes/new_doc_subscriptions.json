@@ -1,0 +1,13 @@
+{
+    "request": "POST https://stagingapi.beis-orp-alpha.io/api/1.0/event_subscription/",
+    "body": {
+        "event_type_id": 1,
+        "event_filters": [
+            {
+                "event_key": "document_pk",
+                "event_filter": "/uksi/2002/618"
+            }
+        ],
+        "deliver_async": true
+    }
+}

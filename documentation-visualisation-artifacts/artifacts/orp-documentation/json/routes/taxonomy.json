@@ -1,0 +1,33 @@
+{
+    "endpoints": [
+        "GET https://stagingapi.beis-orp-alpha.io/api/1.0/taxonomies/",
+        "GET https://stagingapi.beis-orp-alpha.io/api/1.0/taxonomies/{id}/"
+    ],
+    "all": {
+        "request": "GET https://stagingapi.beis-orp-alpha.io/api/1.0/taxonomies/",
+        "response": {
+            "count": 113,
+            "next": "https://stagingapi.beis-orp-alpha.io/api/1.0/taxonomies/?page=2",
+            "previous": null,
+            "results": [
+                {
+                    "id": 1,
+                    "data": "trusts",
+                    "categories": "https://stagingapi.beis-orp-alpha.io/api/1.0/taxonomies/1/categories/",
+                    "url": "https://stagingapi.beis-orp-alpha.io/api/1.0/taxonomies/1/"
+                }
+            ]
+        }
+    },
+    "id": {
+        "request": "GET https://stagingapi.beis-orp-alpha.io/api/1.0/taxonomies/{id}/",
+        "response": {
+            "id": 1,
+            "data": "example_taxonomy",
+            "document_metadata_definition_id": 6,
+            "tsvec": "'example_taxonomy':1",
+            "_hash": "-863391002436207175",
+            "categories": "https://stagingapi.beis-orp-alpha.io/api/1.0/taxonomies/1/categories/"
+        }
+    }
+}

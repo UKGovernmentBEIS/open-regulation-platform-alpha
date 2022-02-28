@@ -1,0 +1,87 @@
+
+begin;
+
+select plan(4);
+
+\i tests/test_support/base-users-setup.sql
+\i tests/test_support/base-docs-setup.sql
+\i tests/test_support/base-orpml-setup.sql
+
+
+
+
+-- select ok(
+--     (select true)
+-- );
+
+
+select lives_ok($$
+    insert into public_api.document (document_type_id,raw_text) values
+    (
+        ((select id from public_api.document_type where name = 'orpml')),
+        '{
+            "guidance_identifier": "",
+            "guidance_element": "this is some guidance",
+            "laid_pursuant_to": [{
+                "document_key": "upkga/2020/01",
+                "document_extent": null
+            }],
+            "created_on": "2021-08-01",
+            "valid_from": "2021-08-01"
+        }'
+    )
+$$
+);
+
+select throws_ok($$
+    insert into public_api.document (document_type_id,raw_text) values
+    (
+        ((select id from public_api.document_type where name = 'orpml')),
+        '{
+            "guidance_identifier": "",
+            "guidance_element": "this is some guidance",
+            "laid_pursant_to": [{
+                "document_key": "upkga/2020/01",
+                "document_extent": null
+            }]
+        }'
+    )
+$$
+);
+
+-- insert into document (document_type_id,raw_text) values ((select id from document_type where name = 'orpml'),'{}');
+
+select set_config('request.jwt.claim.user_id',(select id::text from users where email = 'editor@beis.gov.uk'),false);
+set role orp_postgrest_web;
+
+select lives_ok($$
+    select public_api.publish_orpml(
+        '{
+                "guidance_identifier": "",
+                "guidance_element": "this is some guidance",
+                "laid_pursuant_to": [{
+                    "document_key": "upkga/2020/01",
+                    "document_extent": null
+                }],
+                "created_on": "2021-08-01",
+                "valid_from": "2021-08-01"
+            }'
+    )
+$$);
+
+select throws_ok($$
+    select public_api.publish_orpml(
+        '{
+                "guidance_identifier": "",
+                "guidance_element": "this is some guidance",
+                "laid_pursant_to": [{
+                    "document_key": "upkga/2020/01",
+                    "document_extent": null
+                }],
+                "created_on": "2021-08-01",
+                "valid_from": "2021-08-01"
+            }'
+    )
+$$);
+
+rollback;

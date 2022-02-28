@@ -1,0 +1,64 @@
+{
+    "body": {
+        "filters": [
+            {
+                "operator": "and",
+                "filter_elements": [
+                    {
+                        "document_metadata_category": "title",
+                        "websearch_tsquery": "medical"
+                    }
+                ]
+            }
+        ],
+        "relationship_names": [
+            "guidance_references_legislation"
+        ],
+        "metadata_categories": [
+            "title"
+        ]
+    },
+    "headers": {
+        "Content-Type": "application/json",
+        "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIiA6ICJvcnBfcG9zdGdyZXN0X3dlYiIsICJhcHBfcm9sZXMiIDogWyJhZG1pbiJdLCAidXNlcl9pZCIgOiAxLCAiZXhwIiA6IDE2MzcyNDA1NTJ9.zNnoQdBWVPEyDHR5l3zeFraDMR7mmhgU5zFd542_2bM"
+    },
+    "response": {
+        "edges": [
+            {
+                "data": {
+                    "id": 44,
+                    "stale": "False",
+                    "source": 115,
+                    "target": 114,
+                    "properties": {
+                        "guidance_references_legislation": "http://www.legislation.gov.uk/id/uksi/2002/618"
+                    },
+                    "property_key": "guidance_references_legislation",
+                    "relationship_confirmation": {
+                        "user_id": null,
+                        "confirmed_on": null,
+                        "confirmation_status": null
+                    }
+                }
+            }
+        ],
+        "nodes": [
+            {
+                "data": {
+                    "id": 114,
+                    "title": "The Medical Devices Regulations 2002",
+                    "document_type_id": 1,
+                    "document_type_name": "legislation.gov.uk"
+                }
+            },
+            {
+                "data": {
+                    "id": 115,
+                    "title": "Clinical investigations of medical devices \u2013 guidance for manufacturers",
+                    "document_type_id": 2,
+                    "document_type_name": "orpml"
+                }
+            }
+        ]
+    }
+}

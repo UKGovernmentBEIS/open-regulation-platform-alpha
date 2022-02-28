@@ -1,0 +1,11 @@
+{
+    "request": "POST https://stagingapi.beis-orp-alpha.io/auth/login/",
+    "body": {
+        "email" : "example@example.com",
+        "password" : "example_password"
+    },
+    "response": {
+        "signed_jwt": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9..."
+    },
+    "curl": "curl -XPOST -H \"Content-type: application/json\" -d '{\"email\": \"example@example.com\",\"password\": \"example_password\"}' 'https://stagingapi.beis-orp-alpha.io/auth/login/'"
+}

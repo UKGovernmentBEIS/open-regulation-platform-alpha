@@ -1,0 +1,14 @@
+aws_region             = "eu-west-2"
+domain                 = "beis-orp-alpha.io"
+web_subdomain          = "staging"
+api_subdomain          = "stagingapi"
+users_subdomain        = "stagingusers"
+app_name               = "ORP Staging"
+ssh_key_name           = "orp-staging"
+private_ssh_key_path   = "/home/admin/.ssh/orp-staging.pem"
+artifact_bucket        = "orp-build-outputs"
+ami_id                 = "ami-050949f5d3aede071"
+storage_gb             = 1000
+storage_iops           = 3000
+storage_throughput     = 125
+database               = "orp"

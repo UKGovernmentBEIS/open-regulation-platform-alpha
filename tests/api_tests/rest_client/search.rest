@@ -1,0 +1,67 @@
+
+###
+
+# @name editor_login
+POST http://127.0.0.1:3001/rpc/login
+Content-Type: application/json
+
+{
+    "email" : "editor@beis.gov.uk",
+    "password" : "Password1!"
+}
+
+###
+
+@editor_jwt = {{editor_login.response.body.$.signed_jwt}}
+
+# @name doc_search_metadata_cats
+POST http://127.0.0.1:3001/rpc/document_search
+Content-Type: application/json
+Accept: application/json
+Authorization: Bearer {{editor_jwt}}
+
+{
+    "filters" : [{
+        "operator" : "and",
+        "filter_elements" : [{
+            "document_metadata_category" : "title",
+            "websearch_tsquery" : "asbestos"
+        }]
+    }]
+}
+
+###
+
+# @name doc_search_metadata_names
+POST http://127.0.0.1:3001/rpc/document_search
+Content-Type: application/json
+Accept: application/json
+Authorization: Bearer {{editor_jwt}}
+
+{
+    "filters" : [{
+        "operator" : "and",
+        "filter_elements" : [{
+            "document_metadata_name": "orpml_title",
+            "websearch_tsquery" : "asbestos"
+        },
+        {
+            "document_metadata_name": "orpml_classification",
+            "websearch_tsquery" : "asbestos"
+        }]
+    }]
+}
+
+###
+
+@first_search_result = {{doc_search_metadata_cats.response.body.$.0}}
+@second_search_result = {{doc_search_metadata_cats.response.body.$.1}}
+
+
+# @name search_results
+GET http://127.0.0.1:3001/document
+    ?select=document_id:id,created_on,revision_number,primary_key:pk,document_type(id,name),related_documents:document_graph!document_id_a(document_id_b,relationship_properties),reverse_related_documents:document_graph!document_id_b(document_id_a,relationship_properties),document_metadata:document_metadata_view(data,category,name,distinct_metadata_id),document_enrichments:enrichment(id,data,extent,enrichment_def(id,name),enrichment_feedback(good,notes,user_info(first_name,last_name,email))))
+    &id=in.({{first_search_result}},{{second_search_result}})
+    &document_metadata_view.category=in.(title,longtitle,enacted,identification,classification,named_entities)
+Content-Type: application/json
+Authorization: Bearer {{editor_jwt}}

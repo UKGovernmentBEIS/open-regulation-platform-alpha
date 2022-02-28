@@ -1,0 +1,158 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #E7EBEE;
+}
+
+/* MISCELLANEOUS */
+/* Change page width to full width */
+.joqrYg,.ddrGRK,.dMGTrC{
+  max-width: 100%!important;
+  margin: 0 72px!important
+}
+
+/* HEADER */
+/* Align button in header to end */
+.etJxs{
+  justify-content: flex-end!important;
+  flex-direction: row!important;
+}
+
+/* BACKGROUND COLOURS */
+.bg-green{
+  background-color: green;
+}
+.bg-blue{
+  background-color: blue;
+}
+.bg-gray{
+  background-color: lightgray;
+}
+.bg-red{
+  background-color: red;
+}
+
+/* LOGIN FORM */
+.Login {
+  padding: 60px 0;
+  background-color: white;
+  width: 500px;
+  margin: auto;
+  margin-top: 70px;
+}
+.Login form {
+  margin: 0 auto;
+  max-width: 320px;
+}
+
+/* DOCUMENT & ENRICHMENT TABLE */
+#document-table{
+  border-collapse: separate;
+  border-spacing: 0px 20px;
+}
+#document-table>thead>tr>th{
+  padding-left: 20px;
+}
+#document-table>tbody>tr>td{
+  border: 0px;
+  padding: 5px 20px 24px 20px;
+  background-color: white;
+}
+#document-table>tbody>tr>td:first-child {
+  border-top-left-radius: 2px;
+  border-bottom-left-radius: 2px;
+  width: 45%
+}
+#document-table>tbody>tr>td:last-child {
+  border-bottom-right-radius: 2px;
+  border-top-right-radius: 2px;
+}
+#document-table>tbody>tr>td:last-child>p {
+  white-space: nowrap;
+}
+.progress-circle{
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  margin-right: 5px;
+  display: inline-block;
+}
+
+#enichmentPopover{
+  background-color: #001F38;
+  color: white;
+  text-align: center;
+  padding: 10px 20px;
+  font-size: 16px;
+  margin-top: 10px;
+  border-radius: 16px;
+}
+
+/* Document Review Page */
+.sourceDocBtn{
+  background-color: #738492;
+  border-radius: 30px;
+  padding: 20px 30px;
+  color: white;
+  border: none;
+  margin: 30px 0px
+}
+.sourceDocBtn > a{
+  text-decoration: none;
+  color: white;
+}
+
+#enrichmentCol{
+  width: 85%;
+  margin: auto;
+}
+.enrichment-list{
+  height: 500px;
+  overflow-y: scroll;
+  -ms-overflow-style: none;  /* Internet Explorer 10+ */
+  scrollbar-width: none;  /* Firefox */
+
+  -webkit-mask-image:linear-gradient(to bottom, black 85%, transparent 100%);
+  mask-image: linear-gradient(to bottom, black 85%, transparent 100%);
+}
+::-webkit-scrollbar {
+  width: 0;  /* Remove scrollbar space */
+  background: transparent;  /* Optional: just make scrollbar invisible */
+}
+.enrichment{
+  border: 2px solid lightgray;
+  border-radius: 5px;
+}
+
+#review-column{
+  overflow-y: scroll;
+  -ms-overflow-style: none;  /* Internet Explorer 10+ */
+  scrollbar-width: none;  /* Firefox */
+  height: calc(100vh - 120px);
+}
+#review-editor{
+  background-color: white;
+  padding: 25px 40px;
+  overflow-wrap: break-word;
+  box-sizing: border-box;
+  width: 90%;
+  height: 100%;
+  border-radius: 20px;
+}
+#feedbackBtns{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.modalBtnsRow{
+  margin-top: 10px!important;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+.modalBtn{
+  width: 100px!important;
+  height: 50px!important;
+}

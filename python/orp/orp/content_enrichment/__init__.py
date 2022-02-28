@@ -1,0 +1,3 @@
+
+#from .deontic_language import extract_obligations_from_string
+from .deontic_language_html import extract_obligations_from_string

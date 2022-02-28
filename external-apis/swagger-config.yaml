@@ -1,0 +1,477 @@
+openapi: 3.0.2
+info:
+  title: ''
+  version: ''
+paths:
+  /api/{version}/:
+    get:
+      operationId: retrieveAPIRoot
+      description: List of browseable API endpointegers.
+      parameters:
+      - name: version
+        in: path
+        required: true
+        description: ''
+        schema:
+          type: string
+      responses:
+        '200':
+          content:
+            application/json:
+              schema: {}
+          description: ''
+      tags:
+      - api
+  /api/{version}/taxonomies/:
+    get:
+      operationId: listTaxonomys
+      description: Call list method in api backend to make post request.
+      parameters:
+      - name: version
+        in: path
+        required: true
+        description: ''
+        schema:
+          type: string
+      - name: page
+        required: false
+        in: query
+        description: A page number within the paginated result set.
+        schema:
+          type: integereger
+      - name: page_size
+        required: false
+        in: query
+        description: Number of results to return per page.
+        schema:
+          type: integereger
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  count:
+                    type: integereger
+                    example: 123
+                  next:
+                    type: string
+                    nullable: true
+                    format: uri
+                    example: http://api.example.org/accounts/?page=4
+                  previous:
+                    type: string
+                    nullable: true
+                    format: uri
+                    example: http://api.example.org/accounts/?page=2
+                  results:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/Taxonomy'
+          description: ''
+      tags:
+      - api
+  /api/{version}/taxonomies/{id}/:
+    get:
+      operationId: retrieveTaxonomy
+      description: Call retrieve method in api backend to make post request.
+      parameters:
+      - name: version
+        in: path
+        required: true
+        description: ''
+        schema:
+          type: string
+      - name: id
+        in: path
+        required: true
+        description: ''
+        schema:
+          type: string
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Taxonomy'
+          description: ''
+      tags:
+      - api
+  /api/{version}/taxonomies/{id}/categories/:
+    get:
+      operationId: listCategorys
+      description: Call list method in api backend to make post request.
+      parameters:
+      - name: version
+        in: path
+        required: true
+        description: ''
+        schema:
+          type: string
+      - name: id
+        in: path
+        required: true
+        description: ''
+        schema:
+          type: string
+      - name: page
+        required: false
+        in: query
+        description: A page number within the paginated result set.
+        schema:
+          type: integereger
+      - name: page_size
+        required: false
+        in: query
+        description: Number of results to return per page.
+        schema:
+          type: integereger
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  count:
+                    type: integereger
+                    example: 123
+                  next:
+                    type: string
+                    nullable: true
+                    format: uri
+                    example: http://api.example.org/accounts/?page=4
+                  previous:
+                    type: string
+                    nullable: true
+                    format: uri
+                    example: http://api.example.org/accounts/?page=2
+                  results:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/Category'
+          description: ''
+      tags:
+      - api
+  /api/{version}/taxonomies/{id}/categories/{category_id}/:
+    get:
+      operationId: retrieveCategory
+      description: Call retrieve method in api backend to make post request.
+      parameters:
+      - name: version
+        in: path
+        required: true
+        description: ''
+        schema:
+          type: string
+      - name: id
+        in: path
+        required: true
+        description: ''
+        schema:
+          type: string
+      - name: category_id
+        in: path
+        required: true
+        description: ''
+        schema:
+          type: string
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Category'
+          description: ''
+      tags:
+      - api
+  /api/{version}/documents/:
+    get:
+      operationId: listDocuments
+      description: Call list method in api backend to make post request.
+      parameters:
+      - name: version
+        in: path
+        required: true
+        description: ''
+        schema:
+          type: string
+      - name: page
+        required: false
+        in: query
+        description: A page number within the paginated result set.
+        schema:
+          type: integereger
+      - name: page_size
+        required: false
+        in: query
+        description: Number of results to return per page.
+        schema:
+          type: integereger
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  count:
+                    type: integereger
+                    example: 123
+                  next:
+                    type: string
+                    nullable: true
+                    format: uri
+                    example: http://api.example.org/accounts/?page=4
+                  previous:
+                    type: string
+                    nullable: true
+                    format: uri
+                    example: http://api.example.org/accounts/?page=2
+                  results:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/Document'
+          description: ''
+      tags:
+      - api
+  /api/{version}/documents/{id}/:
+    get:
+      operationId: retrieveDocument
+      description: Call retrieve method in api backend to make post request.
+      parameters:
+      - name: version
+        in: path
+        required: true
+        description: ''
+        schema:
+          type: string
+      - name: id
+        in: path
+        required: true
+        description: ''
+        schema:
+          type: string
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Document'
+          description: ''
+      tags:
+      - api
+  /api/{version}/entities/:
+    get:
+      operationId: listEntitys
+      description: Call list method in api backend to make post request.
+      parameters:
+      - name: version
+        in: path
+        required: true
+        description: ''
+        schema:
+          type: string
+      - name: page
+        required: false
+        in: query
+        description: A page number within the paginated result set.
+        schema:
+          type: integereger
+      - name: page_size
+        required: false
+        in: query
+        description: Number of results to return per page.
+        schema:
+          type: integereger
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  count:
+                    type: integereger
+                    example: 123
+                  next:
+                    type: string
+                    nullable: true
+                    format: uri
+                    example: http://api.example.org/accounts/?page=4
+                  previous:
+                    type: string
+                    nullable: true
+                    format: uri
+                    example: http://api.example.org/accounts/?page=2
+                  results:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/Entity'
+          description: ''
+      tags:
+      - api
+  /api/{version}/entities/{id}/:
+    get:
+      operationId: retrieveEntity
+      description: Call retrieve method in api backend to make post request.
+      parameters:
+      - name: version
+        in: path
+        required: true
+        description: ''
+        schema:
+          type: string
+      - name: id
+        in: path
+        required: true
+        description: ''
+        schema:
+          type: string
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Entity'
+          description: ''
+      tags:
+      - api
+  /api/{version}/entities/{id}/documents/:
+    get:
+      operationId: retrieveEntity
+      description: Call retrieve method in api backend to make post request.
+      parameters:
+      - name: version
+        in: path
+        required: true
+        description: ''
+        schema:
+          type: string
+      - name: id
+        in: path
+        required: true
+        description: ''
+        schema:
+          type: string
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Document'
+          description: ''
+      tags:
+      - api
+  /auth/login/:
+    post:
+      operationId: createLogin
+      description: Return jwt token or render next screen based on http content type.
+      parameters: []
+      requestBody:
+        content:
+          application/json:
+            schema: {}
+          application/x-www-form-urlencoded:
+            schema: {}
+          multipart/form-data:
+            schema: {}
+      responses:
+        '201':
+          content:
+            application/json:
+              schema: {}
+          description: ''
+      tags:
+      - auth
+components:
+  schemas:
+    Taxonomy:
+      type: object
+      properties:
+        id:
+          type: integer
+        id_highwater_mark:
+          type: integer
+        document_type_id:
+          type: integer
+        name:
+          type: string
+        transform_xpath:
+          type: string
+        function_name:
+          type: string
+        tsvector_config:
+          type: string
+        distinctify:
+          type: boolean
+    Category:
+      type: object
+      properties:
+        id:
+          type: integer
+        document_metadata_definition_id:
+          type: integer
+        data:
+          type: string
+        tsvec:
+          type: string
+        _hash:
+          type: string
+    Document:
+      type: object
+      properties:
+        document_id:
+          type: integer
+        raw_text:
+          type: string
+        document_metadata:
+          type: array
+          items:
+            id:
+              type: id
+            data:
+              type: string
+            name:
+              type: string
+        document_type:
+          type: object
+          properties:
+            id:
+              type: integer
+            name:
+              type: string
+        document_enrichments:
+          type: array
+          items:
+            id:
+              type: integer
+            data:
+              type: string
+            extent:
+              type: string
+            enrichment_def:
+              type: object
+              properties:
+                id:
+                  type: integer
+                name:
+                  type: string
+                type:
+                  type: string
+            enrichment_feedback:
+              type: object
+                properties:
+                  good:
+                    type: string
+                  notes:
+                    type: string
+                  user_id:
+                    type: integer
+    RelatedDocument:
+      type: object
+      properties: {}
+    Entity:
+      type: object
+      properties: {}
