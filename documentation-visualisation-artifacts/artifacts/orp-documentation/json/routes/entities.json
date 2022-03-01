@@ -1,0 +1,45 @@
+{
+    "endpoints": [
+        "GET https://stagingapi.beis-orp-alpha.io/api/1.0/entities/",
+        "GET https://stagingapi.beis-orp-alpha.io/api/1.0/entities/{id}/",
+        "GET https://stagingapi.beis-orp-alpha.io/api/1.0/entities/{id}/documents/"
+    ],
+    "all": {
+        "request": "GET https://stagingapi.beis-orp-alpha.io/api/1.0/entities/",
+        "response": {
+            "count": "50",
+            "next": "https://stagingapi.beis-orp-alpha.io/api/1.0/entities/?page=2",
+            "previous": null,
+            "results": [
+                {
+                    "id": "{id}",
+                    "data": "the Example Corporation",
+                    "documents": "https://stagingapi.beis-orp-alpha.io/api/1.0/entities/{id}/documents/",
+                    "url": "https://stagingapi.beis-orp-alpha.io/api/1.0/entities/{id}/"
+                }
+            ]
+        }
+    },
+    "id": {
+        "request": "GET https://stagingapi.beis-orp-alpha.io/api/1.0/entities/{id}",
+        "response": {
+            "id": "{id}",
+            "data": "the Example Corporation",
+            "document_metadata_definition_id": 8,
+            "tsvec": "'Corporation':3 'Example':2 'the':1",
+            "_hash": "3221061563876166087",
+            "documents": "https://stagingapi.beis-orp-alpha.io/api/1.0/entities/112/documents/"
+        }
+    },
+    "documents": {
+        "request": "GET https://stagingapi.beis-orp-alpha.io/api/1.0/entities/{id}/documents/",
+        "response": {
+            "id": 25,
+            "data": "the London Docklands Development Corporation",
+            "document_metadata_definition_id": 8,
+            "tsvec": "'corporation':5 'development':4 'docklands':3 'london':2 'the':1",
+            "_hash": "3221061563876166087",
+            "documents": "https://stagingapi.beis-orp-alpha.io/api/1.0/entities/112/documents/"
+        }
+    }
+}

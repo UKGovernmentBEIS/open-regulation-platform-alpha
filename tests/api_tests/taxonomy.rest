@@ -1,0 +1,37 @@
+
+# @name editor_login
+POST http://127.0.0.1:3001/rpc/login
+Content-Type: application/json
+
+{
+    "email" : "editor@beis.gov.uk",
+    "password" : "Password1!"
+}
+
+###
+@editor_jwt = {{editor_login.response.body.$.signed_jwt}}
+
+# @name get_taxonomy_id
+
+GET http://127.0.0.1:3001/document_metadata_definition
+    ?select=id
+    &name=eq.classification
+Content-Type: application/json
+Authorization: Bearer {{editor_jwt}}
+Accept: application/vnd.pgrst.object+json
+
+@taxonomy_id = {{get_taxonomy_id.response.body.id}}
+
+###
+
+# @name taxonomies
+
+GET http://127.0.0.1:3001/distinct_document_metadata
+    ?select=id,data
+    &document_metadata_definition_id=eq.{{taxonomy_id}}
+Content-Type: application/json
+Authorization: Bearer {{editor_jwt}}
+Range-Unit: items
+Range: 0-9
+
+###

@@ -1,0 +1,22 @@
+#
+# Copyright (C) 2021 Liam Brannigan
+#
+variables:
+  PIP_CACHE_DIR: "$CI_PROJECT_DIR/pip-cache"
+
+cache:
+  paths:
+    - "$CI_PROJECT_DIR/pip-cache"
+  key: "$CI_PROJECT_ID"
+
+content-enrichment:
+  only:
+    - merge_request
+    - master
+    - web
+  image: python:3.8.8-slim-buster
+  script:
+    - pip install -U pip setuptools
+    - pip install -r python/orp/requirements.txt
+    - python -m pytest python/orp/orp/content_enrichment/test
+    - python -m pytest python/orp/orp/authority_ner/test

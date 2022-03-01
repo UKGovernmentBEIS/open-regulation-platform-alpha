@@ -1,0 +1,758 @@
+<akomaNtoso xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0" xsi:schemaLocation="http://docs.oasis-open.org/legaldocml/ns/akn/3.0 http://docs.oasis-open.org/legaldocml/akn-core/v1.0/cos01/part2-specs/schemas/akomantoso30.xsd">
+    <act name="UnitedKingdomPublicGeneralAct">
+        <meta>
+            <identification source="#source">
+                <FRBRWork>
+                    <FRBRthis value="http://www.legislation.gov.uk/id/ukpga/2019/13"/>
+                    <FRBRuri value="http://www.legislation.gov.uk/id/ukpga/2019/13"/>
+                    <FRBRdate date="2019-03-26" name="enacted"/>
+                    <FRBRauthor href="http://www.legislation.gov.uk/id/legislature/UnitedKingdomParliament"/>
+                    <FRBRcountry value="GB-UKM"/>
+                    <FRBRnumber value="13"/>
+                    <FRBRname value="2019 c. 13"/>
+                    <FRBRprescriptive value="true"/>
+                </FRBRWork>
+                <FRBRExpression>
+                    <FRBRthis value="http://www.legislation.gov.uk/ukpga/2019/13/made"/>
+                    <FRBRuri value="http://www.legislation.gov.uk/ukpga/2019/13/made"/>
+                    <FRBRdate date="2019-03-26" name="enacted"/>
+                    <FRBRauthor href="#source"/>
+                    <FRBRlanguage language="eng"/>
+                </FRBRExpression>
+                <FRBRManifestation>
+                    <FRBRthis value="http://www.legislation.gov.uk/ukpga/2019/13/made/data.akn"/>
+                    <FRBRuri value="http://www.legislation.gov.uk/ukpga/2019/13/made/data.akn"/>
+                    <FRBRdate date="2021-07-25+01:00" name="transform"/>
+                    <FRBRauthor href="http://www.legislation.gov.uk"/>
+                    <FRBRformat value="application/akn+xml"/>
+                </FRBRManifestation>
+            </identification>
+            <lifecycle source="#source">
+                <eventRef date="2019-03-26" type="generation" eId="enacted-date" source="#source"/>
+                <eventRef date="2019-03-26" type="amendment" source="#source"/>
+                <eventRef date="2019-04-01" type="amendment" source="#source"/>
+                <eventRef date="2019-05-26" type="amendment" source="#source"/>
+            </lifecycle>
+            <references source="#source">
+                <TLCOrganization eId="source" href="http://www.legislation.gov.uk/id/publisher/KingsOrQueensPrinterOfActsOfParliament" showAs="Queen's Printer of Acts of Parliament"/>
+            </references>
+            <proprietary xmlns:ukl="http://www.legislation.gov.uk/namespaces/legislation"
+                xmlns:ukm="http://www.legislation.gov.uk/namespaces/metadata"
+                xmlns:dc="http://purl.org/dc/elements/1.1/"
+                xmlns:dct="http://purl.org/dc/terms/"
+                xmlns:atom="http://www.w3.org/2005/Atom" source="#source">
+                <dc:identifier>http://www.legislation.gov.uk/ukpga/2019/13/made</dc:identifier>
+                <dc:title>Northern Ireland (Regional Rates and Energy) Act 2019</dc:title>
+                <dc:language>en</dc:language>
+                <dc:publisher>Queen's Printer of Acts of Parliament</dc:publisher>
+                <dc:modified>2019-03-27</dc:modified>
+                <atom:link rel="self" href="http://www.legislation.gov.uk/ukpga/2019/13/made/data.xml" type="application/xml"/>
+                <atom:link rel="http://www.legislation.gov.uk/def/navigation/resources" href="http://www.legislation.gov.uk/ukpga/2019/13/resources" title="More Resources"/>
+                <atom:link rel="http://www.legislation.gov.uk/def/navigation/notes" href="http://www.legislation.gov.uk/ukpga/2019/13/notes" title="Explanatory Notes"/>
+                <atom:link rel="http://www.legislation.gov.uk/def/navigation/notes/toc" href="http://www.legislation.gov.uk/ukpga/2019/13/notes/contents" title="Explanatory Notes Table of Contents"/>
+                <atom:link rel="http://www.legislation.gov.uk/def/navigation/act" href="http://www.legislation.gov.uk/ukpga/2019/13/made" title="whole act"/>
+                <atom:link rel="http://www.legislation.gov.uk/def/navigation/introduction" href="http://www.legislation.gov.uk/ukpga/2019/13/introduction/made" title="introduction"/>
+                <atom:link rel="http://www.legislation.gov.uk/def/navigation/body" href="http://www.legislation.gov.uk/ukpga/2019/13/body/made" title="body"/>
+                <atom:link rel="http://www.legislation.gov.uk/def/navigation/schedules" href="http://www.legislation.gov.uk/ukpga/2019/13/schedules/made" title="schedules"/>
+                <atom:link rel="alternate" type="application/rdf+xml" href="http://www.legislation.gov.uk/ukpga/2019/13/made/data.rdf" title="RDF/XML"/>
+                <atom:link rel="alternate" type="application/akn+xml" href="http://www.legislation.gov.uk/ukpga/2019/13/made/data.akn" title="AKN"/>
+                <atom:link rel="alternate" type="application/xhtml+xml" href="http://www.legislation.gov.uk/ukpga/2019/13/made/data.xht" title="HTML snippet"/>
+                <atom:link rel="alternate" type="application/pdf" href="http://www.legislation.gov.uk/ukpga/2019/13/made/data.pdf" title="PDF"/>
+                <atom:link rel="alternate" type="application/akn+xhtml" href="http://www.legislation.gov.uk/ukpga/2019/13/made/data.html" title="HTML5 snippet"/>
+                <atom:link rel="alternate" href="http://www.legislation.gov.uk/ukpga/2019/13/pdfs/ukpga_20190013_en.pdf" type="application/pdf" title="Original PDF"/>
+                <atom:link rel="http://purl.org/dc/terms/tableOfContents" hreflang="en" href="http://www.legislation.gov.uk/ukpga/2019/13/contents/made" title="Table of Contents"/>
+                <atom:link rel="http://purl.org/dc/terms/hasVersion" href="http://www.legislation.gov.uk/ukpga/2019/13/2019-03-26" title="2019-03-26"/>
+                <atom:link rel="http://purl.org/dc/terms/hasVersion" href="http://www.legislation.gov.uk/ukpga/2019/13/2019-04-01" title="2019-04-01"/>
+                <atom:link rel="http://purl.org/dc/terms/hasVersion" href="http://www.legislation.gov.uk/ukpga/2019/13/2019-05-26" title="2019-05-26"/>
+                <atom:link rel="http://purl.org/dc/terms/hasVersion" href="http://www.legislation.gov.uk/ukpga/2019/13" title="current"/>
+                <ukm:PrimaryMetadata>
+                    <ukm:DocumentClassification>
+                        <ukm:DocumentCategory Value="primary"/>
+                        <ukm:DocumentMainType Value="UnitedKingdomPublicGeneralAct"/>
+                        <ukm:DocumentStatus Value="final"/>
+                    </ukm:DocumentClassification>
+                    <ukm:Year Value="2019"/>
+                    <ukm:Number Value="13"/>
+                    <ukm:EnactmentDate Date="2019-03-26"/>
+                    <ukm:ISBN Value="9780105700470"/>
+                </ukm:PrimaryMetadata>
+                <ukm:Notes>
+                    <ukm:Note IdURI="http://www.legislation.gov.uk/id/ukpga/2019/13/notes"/>
+                    <ukm:Alternatives>
+                        <ukm:Alternative URI="http://www.legislation.gov.uk/ukpga/2019/13/pdfs/ukpgaen_20190013_en.pdf" Date="2019-10-08" Title="Explanatory Note" Size="1355353"/>
+                    </ukm:Alternatives>
+                </ukm:Notes>
+                <ukm:Alternatives>
+                    <ukm:Alternative URI="http://www.legislation.gov.uk/ukpga/2019/13/pdfs/ukpga_20190013_en.pdf" Date="2019-03-27" Size="429560"/>
+                </ukm:Alternatives>
+                <ukm:Statistics>
+                    <ukm:TotalParagraphs Value="8"/>
+                    <ukm:BodyParagraphs Value="8"/>
+                    <ukm:ScheduleParagraphs Value="0"/>
+                    <ukm:AttachmentParagraphs Value="0"/>
+                    <ukm:TotalImages Value="0"/>
+                </ukm:Statistics>
+            </proprietary>
+        </meta>
+        <preface>
+            <p class="title">
+                <shortTitle>Northern Ireland (Regional Rates and Energy) Act 2019</shortTitle>
+            </p>
+            <p class="number">
+                <docNumber>2019 Chapter 13</docNumber>
+            </p>
+            <longTitle>
+                <p>An Act to make provision about the regional rate in Northern Ireland for the year ending 31 March 2020; and amend the Renewable Heat Incentive Scheme Regulations (Northern Ireland) 2012.</p>
+            </longTitle>
+            <p class="DateOfEnactment">
+                <docDate date="2019-03-26">[26th March 2019]</docDate>
+            </p>
+        </preface>
+        <preamble>
+            <formula name="EnactingText">
+                <p>B<inline name="smallCaps" style="font-variant:small-caps">e it enacted</inline> by the Queen’s most Excellent Majesty, by and with the advice and consent of the Lords Spiritual and Temporal, and Commons, in this present Parliament assembled, and by the authority of the same, as follows:—</p>
+            </formula>
+        </preamble>
+        <body>
+            <hcontainer name="crossheading" eId="crossheading-regional-rates">
+                <heading>Regional rates</heading>
+                <section eId="section-1">
+                    <num>1</num>
+                    <heading>Regional rates</heading>
+                    <subsection eId="section-1-1">
+                        <num>1</num>
+                        <content>
+                            <p>This section applies in respect of the year ending 31 March 2020.</p>
+                        </content>
+                    </subsection>
+                    <subsection eId="section-1-2">
+                        <num>2</num>
+                        <content>
+                            <p>The regional rate to be levied on the rateable net annual values of hereditaments is to be 34.01 pence in the pound.</p>
+                        </content>
+                    </subsection>
+                    <subsection eId="section-1-3">
+                        <num>3</num>
+                        <content>
+                            <p>The regional rate to be levied on the rateable capital values of hereditaments is to be 0.4574 pence in the pound.</p>
+                        </content>
+                    </subsection>
+                    <subsection eId="section-1-4">
+                        <num>4</num>
+                        <content>
+                            <p>A rate specified in subsection <a href="#section-1-2">(2)</a> or <a href="#section-1-3">(3)</a> may be varied by an order made by the Department under Article 7(1) of the Rates Order.</p>
+                        </content>
+                    </subsection>
+                    <subsection eId="section-1-5">
+                        <num>5</num>
+                        <intro>
+                            <p>An order made by virtue of subsection <a href="#section-1-4">(4)</a>—
+                            </p>
+                        </intro>
+                        <paragraph eId="section-1-5-a">
+                            <num>a</num>
+                            <content>
+                                <p>may be made only after the first occasion on which all the Ministerial offices are filled after the passing of this Act, but</p>
+                            </content>
+                        </paragraph>
+                        <paragraph eId="section-1-5-b">
+                            <num>b</num>
+                            <content>
+                                <p>may set the rate in respect of the whole of the year for which it is made.</p>
+                            </content>
+                        </paragraph>
+                    </subsection>
+                    <subsection eId="section-1-6">
+                        <num>6</num>
+                        <content>
+                            <p>In this section—</p>
+                            <blockList class="unordered">
+                                <item>
+                                    <p>“the Ministerial offices” means—</p>
+                                    <blockList class="ordered">
+                                        <item>
+                                            <num>a</num>
+                                            <p>the offices of First Minister and deputy First Minister, and</p>
+                                        </item>
+                                        <item>
+                                            <num>b</num>
+                                            <p>the Ministerial offices to be held by Northern Ireland Ministers (within the meaning of the Northern Ireland Act 1998);</p>
+                                        </item>
+                                    </blockList>
+                                </item>
+                                <item>
+                                    <p>“the Rates Order” means the Rates (Northern Ireland) Order 1977 (<ref href="http://www.legislation.gov.uk/id/nisi/1977/2157">S.I. 1977/2157 (N.I. 28))</ref>;
+                                    </p>
+                                </item>
+                            </blockList>
+                            <p>and any expression used in this section and in the Rates Order has the meaning given by that Order.</p>
+                        </content>
+                    </subsection>
+                </section>
+            </hcontainer>
+            <hcontainer name="crossheading" eId="crossheading-renewable-heat-incentive-scheme">
+                <heading>Renewable heat incentive scheme</heading>
+                <section eId="section-2">
+                    <num>2</num>
+                    <heading>Introductory</heading>
+                    <subsection eId="section-2-1">
+                        <num>1</num>
+                        <content>
+                            <p>The Renewable Heat Incentive Scheme Regulations (Northern Ireland) 2012 (<ref href="http://www.legislation.gov.uk/id/nisr/2012/396">S.R. (NI) 2012 No. 396</ref>) (“the 2012 Regulations”) are amended in accordance with sections 3 and 4.</p>
+                        </content>
+                    </subsection>
+                    <subsection eId="section-2-2">
+                        <num>2</num>
+                        <content>
+                            <p>Nothing in those sections affects the power to make regulations under section 113 of the Energy Act 2011 amending or revoking any provision amended or inserted by those sections.</p>
+                        </content>
+                    </subsection>
+                </section>
+                <section eId="section-3">
+                    <num>3</num>
+                    <heading>Tariffs for periodic support payments</heading>
+                    <subsection eId="section-3-1">
+                        <num>1</num>
+                        <content>
+                            <p>In regulation 36(3) for “(7B)” substitute “<a href="#p00015">(7C)</a>”.
+                            </p>
+                        </content>
+                    </subsection>
+                    <subsection eId="section-3-2">
+                        <num>2</num>
+                        <intro>
+                            <p>In regulation 36(5)—</p>
+                        </intro>
+                        <paragraph eId="section-3-2-a">
+                            <num>a</num>
+                            <content>
+                                <p>for “(7B)” substitute “<a href="#p00015">(7C)</a>”;
+                                </p>
+                            </content>
+                        </paragraph>
+                        <paragraph eId="section-3-2-b">
+                            <num>b</num>
+                            <content>
+                                <p>for “or 4” substitute “, 4 or 5”.</p>
+                            </content>
+                        </paragraph>
+                    </subsection>
+                    <subsection eId="section-3-3">
+                        <num>3</num>
+                        <content>
+                            <p>In regulation 36(6) for “(7B)” substitute “<a href="#p00015">(7C)</a>”.
+                            </p>
+                        </content>
+                    </subsection>
+                    <subsection eId="section-3-4">
+                        <num>4</num>
+                        <content>
+                            <p>In regulation 36(7) after “(7B)” insert “or <a href="#p00015">(7C)</a>”.
+                            </p>
+                        </content>
+                    </subsection>
+                    <subsection eId="section-3-5">
+                        <num>5</num>
+                        <content>
+                            <p>In regulation 36(7A) after “accredited on or after 18th November 2015” insert “, other than installations to which paragraph <a href="#p00015">(7C)</a> applies”.</p>
+                        </content>
+                    </subsection>
+                    <subsection eId="section-3-6">
+                        <num>6</num>
+                        <content>
+                            <p>In regulation 36 after paragraph (7B) insert—</p>
+                            <p class="BlockAmendment">
+                                <mod>
+                                    <quotedStructure class="secondary regulation main double" startQuote="“" endQuote="”">
+                                        <paragraph eId="p00015">
+                                            <num>7C</num>
+                                            <intro>
+                                                <p>The tariffs for installations (whether accredited before or after the coming into operation of section 3 of the Northern Ireland (Regional Rates and Energy) Act 2019) falling within the small or medium biomass tariffs set out in Schedule 5—</p>
+                                            </intro>
+                                            <subparagraph eId="d4e267">
+                                                <num>a</num>
+                                                <content>
+                                                    <p>for the period beginning with 1st April 2019 and ending with 31st March 2020, are the tariffs set out in Schedule 5;</p>
+                                                </content>
+                                            </subparagraph>
+                                            <subparagraph eId="d4e273">
+                                                <num>b</num>
+                                                <content>
+                                                    <p>for each subsequent year commencing with 1st April and ending with the next 31st March, are the tariffs applicable on the immediately preceding 31st March adjusted by the percentage increase or decrease in the consumer prices index for the previous calendar year (the resulting figure being rounded to the tenth of a penny, with any twentieth of a penny being rounded upwards).</p>
+                                                </content>
+                                            </subparagraph>
+                                        </paragraph>
+                                        <paragraph eId="d4e279">
+                                            <num>7D</num>
+                                            <intro>
+                                                <p>For the purposes of paragraph <a href="#p00015">(7C)</a> “the consumer prices index” means—</p>
+                                            </intro>
+                                            <subparagraph eId="d4e288">
+                                                <num>a</num>
+                                                <content>
+                                                    <p>the consumer prices index calculated and published by the Office for National Statistics; or</p>
+                                                </content>
+                                            </subparagraph>
+                                            <subparagraph eId="d4e294">
+                                                <num>b</num>
+                                                <content>
+                                                    <p>where the index is not published for a year, any substituted index or figures published by that Office.</p>
+                                                </content>
+                                            </subparagraph>
+                                        </paragraph>
+                                    </quotedStructure>
+                                </mod>
+                            </p>
+                        </content>
+                    </subsection>
+                    <subsection eId="section-3-7">
+                        <num>7</num>
+                        <content>
+                            <p>In regulation 36(8) for “(7B)” substitute “<a href="#p00015">(7C)</a>”.
+                            </p>
+                        </content>
+                    </subsection>
+                    <subsection eId="section-3-8">
+                        <num>8</num>
+                        <content>
+                            <p>In regulation 36(9A) after “set out in Schedule 3A” insert “and the tariff for the installation falls to be determined for the period mentioned in paragraph (7B)”.</p>
+                        </content>
+                    </subsection>
+                    <subsection eId="section-3-9">
+                        <num>9</num>
+                        <content>
+                            <p>In regulation 36 after paragraph (9A) insert—</p>
+                            <p class="BlockAmendment">
+                                <mod>
+                                    <quotedStructure class="secondary regulation main double" startQuote="“" endQuote="”">
+                                        <paragraph eId="d4e322">
+                                            <num>9B</num>
+                                            <intro>
+                                                <p>Where an accredited RHI installation falls within the small biomass tariff set out in Schedule 5—</p>
+                                            </intro>
+                                            <subparagraph eId="d4e328">
+                                                <num>a</num>
+                                                <content>
+                                                    <p>the tariff for the initial heat generated by the installation in any 12 month period commencing with, or with the anniversary of, the date of accreditation (regardless of whether that date falls before or after the coming into operation of section 3 of the Northern Ireland (Regional Rates and Energy) Act 2019) is the Tier 1 tariff specified in Schedule 5;</p>
+                                                </content>
+                                            </subparagraph>
+                                            <subparagraph eId="d4e334">
+                                                <num>b</num>
+                                                <content>
+                                                    <p>the tariff for further heat generated in that same 12 month period is the relevant Tier 2 tariff specified in Schedule 5.</p>
+                                                </content>
+                                            </subparagraph>
+                                        </paragraph>
+                                        <paragraph eId="p00016">
+                                            <num>9C</num>
+                                            <intro>
+                                                <p>Where an accredited RHI installation falls within either of the medium biomass tariffs set out in Schedule 5—</p>
+                                            </intro>
+                                            <subparagraph eId="d4e346">
+                                                <num>a</num>
+                                                <content>
+                                                    <p>the tariff for the initial heat generated by the installation in any 12 month period commencing with, or with the anniversary of, the date of accreditation (regardless of whether that date falls before or after the coming into operation of section 3 of the Northern Ireland (Regional Rates and Energy) Act 2019) is the relevant tariff specified in Schedule 5; and</p>
+                                                </content>
+                                            </subparagraph>
+                                            <subparagraph eId="d4e352">
+                                                <num>b</num>
+                                                <content>
+                                                    <p>any further heat generated in that same 12 month period shall not be eligible for periodic payments.</p>
+                                                </content>
+                                            </subparagraph>
+                                        </paragraph>
+                                    </quotedStructure>
+                                </mod>
+                            </p>
+                        </content>
+                    </subsection>
+                    <subsection eId="section-3-10">
+                        <num>10</num>
+                        <content>
+                            <p>In regulation 36(10) for “and (9A)” substitute “to <a href="#p00016">(9C)</a>”.
+                            </p>
+                        </content>
+                    </subsection>
+                    <subsection eId="section-3-11">
+                        <num>11</num>
+                        <content>
+                            <p>In Schedules 3 and 4 omit the entries relating to small and medium biomass installations.</p>
+                        </content>
+                    </subsection>
+                    <subsection eId="section-3-12">
+                        <num>12</num>
+                        <content>
+                            <p>After Schedule 4 insert the Schedule set out in the Schedule to this Act.</p>
+                        </content>
+                    </subsection>
+                    <subsection eId="section-3-13">
+                        <num>13</num>
+                        <content>
+                            <p>Nothing in this section has effect in relation to periodic support payments (within the meaning of the 2012 Regulations) for heat generated before this section comes into force.</p>
+                        </content>
+                    </subsection>
+                </section>
+                <section eId="section-4">
+                    <num>4</num>
+                    <heading>Voluntary buy-out arrangements</heading>
+                    <content>
+                        <p>After regulation 23A insert—</p>
+                        <p class="BlockAmendment">
+                            <mod>
+                                <quotedStructure class="secondary regulation main double" startQuote="“" endQuote="”">
+                                    <hcontainer name="regulation" eId="d4e399">
+                                        <num>23B</num>
+                                        <heading>Voluntary buy-out arrangements</heading>
+                                        <paragraph eId="p00018">
+                                            <num>1</num>
+                                            <content>
+                                                <p>The powers conferred by paragraph <a href="#p00019">(2)</a> may only be exercised in the period while there is no Executive.</p>
+                                            </content>
+                                        </paragraph>
+                                        <paragraph eId="p00019">
+                                            <num>2</num>
+                                            <intro>
+                                                <p>The Department may, in respect of the financial year beginning with 1st April 2019 and each of the two financial years immediately following, prepare and publish in such manner as it thinks appropriate arrangements (“buy-out arrangements”) which—</p>
+                                            </intro>
+                                            <subparagraph eId="d4e418">
+                                                <num>a</num>
+                                                <content>
+                                                    <p>enable a participant to apply in writing to the Department to receive a payment (“a buy-out payment”) in respect of an accredited RHI installation;</p>
+                                                </content>
+                                            </subparagraph>
+                                            <subparagraph eId="p00020">
+                                                <num>b</num>
+                                                <intro>
+                                                    <p>set out the method by which the Department is to determine—</p>
+                                                </intro>
+                                                <clause eId="d4e430">
+                                                    <num>i</num>
+                                                    <content>
+                                                        <p>whether a participant qualifies for a buy-out payment in respect of an accredited RHI installation; and</p>
+                                                    </content>
+                                                </clause>
+                                                <clause eId="d4e436">
+                                                    <num>ii</num>
+                                                    <content>
+                                                        <p>if the participant does qualify, the amount of that payment;</p>
+                                                    </content>
+                                                </clause>
+                                            </subparagraph>
+                                            <subparagraph eId="d4e442">
+                                                <num>c</num>
+                                                <content>
+                                                    <p>where the Department determines that a participant does not qualify for a buy-out payment, require the Department to serve a notice on the participant stating that fact and setting out how the Department made that determination;</p>
+                                                </content>
+                                            </subparagraph>
+                                            <subparagraph eId="d4e448">
+                                                <num>d</num>
+                                                <intro>
+                                                    <p>where the Department determines that a participant qualifies for a buy-out payment, require the Department to serve on the participant a notice (“a buy-out offer”) setting out—</p>
+                                                </intro>
+                                                <clause eId="d4e454">
+                                                    <num>i</num>
+                                                    <content>
+                                                        <p>the proposed amount of that payment,</p>
+                                                    </content>
+                                                </clause>
+                                                <clause eId="d4e460">
+                                                    <num>ii</num>
+                                                    <content>
+                                                        <p>how that payment is calculated, and</p>
+                                                    </content>
+                                                </clause>
+                                                <clause eId="d4e466">
+                                                    <num>iii</num>
+                                                    <content>
+                                                        <p>the effect of paragraph <a href="#p00022">(5)</a>;
+                                                        </p>
+                                                    </content>
+                                                </clause>
+                                            </subparagraph>
+                                            <subparagraph eId="d4e475">
+                                                <num>e</num>
+                                                <content>
+                                                    <p>enable the participant to serve a notice on the Department accepting or rejecting the buy-out offer; and</p>
+                                                </content>
+                                            </subparagraph>
+                                            <subparagraph eId="d4e481">
+                                                <num>f</num>
+                                                <content>
+                                                    <p>require the Department, subject to paragraph <a href="#p00021">(4)(b)</a>, to make to a participant the buy-out payment proposed in a buy-out offer which has been accepted by the participant.</p>
+                                                </content>
+                                            </subparagraph>
+                                        </paragraph>
+                                        <paragraph eId="d4e490">
+                                            <num>3</num>
+                                            <intro>
+                                                <p>The method referred to in paragraph <a href="#p00020">(2)(b)</a>—
+                                                </p>
+                                            </intro>
+                                            <subparagraph eId="d4e499">
+                                                <num>a</num>
+                                                <content>
+                                                    <p>must be such as to take into account the amount of periodic support payments previously received by the participant in respect of the accredited RHI installation; and</p>
+                                                </content>
+                                            </subparagraph>
+                                            <subparagraph eId="d4e505">
+                                                <num>b</num>
+                                                <content>
+                                                    <p>may accordingly be such that the participant does not qualify for a buy-out payment.</p>
+                                                </content>
+                                            </subparagraph>
+                                        </paragraph>
+                                        <paragraph eId="d4e511">
+                                            <num>4</num>
+                                            <intro>
+                                                <p>The buy-out arrangements may contain such other provisions as appear to the Department to be necessary or expedient for the proper administration of the arrangements, including provisions—</p>
+                                            </intro>
+                                            <subparagraph eId="d4e517">
+                                                <num>a</num>
+                                                <content>
+                                                    <p>setting out the times at which, or the periods within which, the steps mentioned in paragraph <a href="#p00019">(2)</a> must be taken by a participant or, as the case may be, the Department;</p>
+                                                </content>
+                                            </subparagraph>
+                                            <subparagraph eId="p00021">
+                                                <num>b</num>
+                                                <content>
+                                                    <p>preventing a buy-out payment being made to a participant at any time when periodic support payments to the participant are being withheld or reduced under Part 7 or are suspended under that Part;</p>
+                                                </content>
+                                            </subparagraph>
+                                            <subparagraph eId="d4e532">
+                                                <num>c</num>
+                                                <content>
+                                                    <p>for the Department to suspend periodic support payments in respect of an accredited RHI installation while an application in respect of that installation is being dealt with under the arrangements;</p>
+                                                </content>
+                                            </subparagraph>
+                                            <subparagraph eId="d4e538">
+                                                <num>d</num>
+                                                <content>
+                                                    <p>applying provisions of these regulations relating to the scheme to the arrangements (with or without modifications).</p>
+                                                </content>
+                                            </subparagraph>
+                                        </paragraph>
+                                        <paragraph eId="p00022">
+                                            <num>5</num>
+                                            <content>
+                                                <p>Where in accordance with the buy-out arrangements, the Department makes a buy-out payment to a participant in respect of an accredited RHI installation, the installation ceases from the date of the payment to be an accredited RHI installation.</p>
+                                            </content>
+                                        </paragraph>
+                                        <paragraph eId="d4e550">
+                                            <num>6</num>
+                                            <intro>
+                                                <p>In paragraph <a href="#p00018">(1)</a> “the period while there is no Executive” means the period—</p>
+                                            </intro>
+                                            <subparagraph eId="d4e559">
+                                                <num>a</num>
+                                                <content>
+                                                    <p>beginning with the coming into operation of section 4 of the Northern Ireland (Regional Rates and Energy) Act 2019; and</p>
+                                                </content>
+                                            </subparagraph>
+                                            <subparagraph eId="d4e565">
+                                                <num>b</num>
+                                                <content>
+                                                    <p>ending on the next occasion when the offices of all of the Northern Ireland Ministers (including those of the First Minister and the deputy First Minister) are filled.</p>
+                                                </content>
+                                            </subparagraph>
+                                        </paragraph>
+                                    </hcontainer>
+                                </quotedStructure>
+                            </mod>
+                        </p>
+                    </content>
+                </section>
+                <section eId="section-5">
+                    <num>5</num>
+                    <heading>Duty to report on operation of buy-out arrangements</heading>
+                    <subsection eId="section-5-1">
+                        <num>1</num>
+                        <content>
+                            <p>The Department must, after the end of each financial year for which buy-out arrangements are published by it, prepare a report on the operation of the arrangements in that year.</p>
+                        </content>
+                    </subsection>
+                    <subsection eId="section-5-2">
+                        <num>2</num>
+                        <intro>
+                            <p>A report under this section in respect of a financial year must, in particular, set out—</p>
+                        </intro>
+                        <paragraph eId="section-5-2-a">
+                            <num>a</num>
+                            <content>
+                                <p>the number of participants who have received a buy-out payment in that year, and</p>
+                            </content>
+                        </paragraph>
+                        <paragraph eId="section-5-2-b">
+                            <num>b</num>
+                            <content>
+                                <p>the total amount of the buy-out payments made by the Department in that year.</p>
+                            </content>
+                        </paragraph>
+                    </subsection>
+                    <subsection eId="section-5-3">
+                        <num>3</num>
+                        <intro>
+                            <p>In the period while there is no Executive—</p>
+                        </intro>
+                        <paragraph eId="section-5-3-a">
+                            <num>a</num>
+                            <content>
+                                <p>the Department must send a report under this section to the Secretary of State, and</p>
+                            </content>
+                        </paragraph>
+                        <paragraph eId="section-5-3-b">
+                            <num>b</num>
+                            <content>
+                                <p>the Secretary of State must lay the report before Parliament.</p>
+                            </content>
+                        </paragraph>
+                    </subsection>
+                    <subsection eId="section-5-4">
+                        <num>4</num>
+                        <content>
+                            <p>At any other time, the Department must lay a report under this section before the Northern Ireland Assembly.</p>
+                        </content>
+                    </subsection>
+                    <subsection eId="section-5-5">
+                        <num>5</num>
+                        <content>
+                            <p>In this section “the Department”, “buy-out arrangements”, “buy-out payment” and “the period while there is no Executive” have the same meaning as in regulation 23B of the 2012 Regulations (inserted by section 4).</p>
+                        </content>
+                    </subsection>
+                </section>
+            </hcontainer>
+            <hcontainer name="crossheading" eId="crossheading-final-provisions">
+                <heading>Final provisions</heading>
+                <section eId="section-6">
+                    <num>6</num>
+                    <heading>Commencement</heading>
+                    <subsection eId="section-6-1">
+                        <num>1</num>
+                        <content>
+                            <p>This section and sections 1 and 7 come into force on the day on which this Act is passed.</p>
+                        </content>
+                    </subsection>
+                    <subsection eId="section-6-2">
+                        <num>2</num>
+                        <content>
+                            <p>Sections 2 and 3 and the Schedule come into force on 1 April 2019.</p>
+                        </content>
+                    </subsection>
+                    <subsection eId="section-6-3">
+                        <num>3</num>
+                        <content>
+                            <p>Sections 4 and 5 come into force at the end of the period of 2 months beginning with the day on which this Act is passed.</p>
+                        </content>
+                    </subsection>
+                </section>
+                <section eId="section-7">
+                    <num>7</num>
+                    <heading>Extent and short title</heading>
+                    <subsection eId="section-7-1">
+                        <num>1</num>
+                        <content>
+                            <p>This Act extends to Northern Ireland only.</p>
+                        </content>
+                    </subsection>
+                    <subsection eId="section-7-2">
+                        <num>2</num>
+                        <content>
+                            <p>This Act may be cited as the Northern Ireland (Regional Rates and Energy) Act 2019.</p>
+                        </content>
+                    </subsection>
+                </section>
+            </hcontainer>
+            <hcontainer name="schedules" eId="d4e679">
+                <hcontainer name="schedule" eId="schedule">
+                    <num>SCHEDULE<authorialNote class="referenceNote" placement="right">
+                        <p>Section 3</p>
+                    </authorialNote>
+                </num>
+                <heading>Schedule to be inserted after Schedule 4 to the 2012 Regulations</heading>
+                <content>
+                    <p class="BlockAmendment">
+                        <mod>
+                            <quotedStructure class="secondary regulation schedule double" startQuote="“" endQuote="”">
+                                <hcontainer name="schedule" eId="p00028">
+                                    <num>SCHEDULE 5<authorialNote class="referenceNote" placement="right">
+                                        <p>Regulation 36</p>
+                                    </authorialNote>
+                                </num>
+                                <heading>Tariffs for small and medium biomass installations (whenever accredited)</heading>
+                                <content>
+                                    <tblock class="tabular">
+                                        <table>
+                                            <tr>
+                                                <th colspan="1" rowspan="1">
+                                                    <p>Tariff name</p>
+                                                </th>
+                                                <th colspan="1" rowspan="1" style="border-left-style:solid;border-left-width:0.5pt;border-left-color:black">
+                                                    <p>Sources of energy or Technology</p>
+                                                </th>
+                                                <th colspan="1" rowspan="1" style="border-left-style:solid;border-left-width:0.5pt;border-left-color:black">
+                                                    <p>Installation capacity</p>
+                                                </th>
+                                                <th colspan="1" rowspan="1" style="border-left-style:solid;border-left-width:0.5pt;border-left-color:black">
+                                                    <p>Tariff  Pence/kWh</p>
+                                                </th>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="1" rowspan="2" style="border-top-style:solid;border-top-width:0.5pt;border-top-color:black">
+                                                    <p>Small Biomass</p>
+                                                </td>
+                                                <td colspan="1" rowspan="2" style="border-left-style:solid;border-left-width:0.5pt;border-left-color:black;border-top-style:solid;border-top-width:0.5pt;border-top-color:black">
+                                                    <p>Solid biomass including solidbiomass contained inmunicipal solid waste</p>
+                                                </td>
+                                                <td colspan="1" rowspan="2" style="border-left-style:solid;border-left-width:0.5pt;border-left-color:black;border-top-style:solid;border-top-width:0.5pt;border-top-color:black">
+                                                    <p>Less than 20kWth</p>
+                                                </td>
+                                                <td colspan="1" rowspan="1" style="border-left-style:solid;border-left-width:0.5pt;border-left-color:black;border-top-style:solid;border-top-width:0.5pt;border-top-color:black">
+                                                    <p>Tier 1: 7.4</p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="1" rowspan="1" style="border-left-style:solid;border-left-width:0.5pt;border-left-color:black;border-top-style:solid;border-top-width:0.5pt;border-top-color:black">
+                                                    <p>Tier 2: 1.8</p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="1" rowspan="1">
+                                                    <p>Medium Biomass (lower capacity)</p>
+                                                </td>
+                                                <td colspan="1" rowspan="1" style="border-left-style:solid;border-left-width:0.5pt;border-left-color:black">
+                                                    <p>As above</p>
+                                                </td>
+                                                <td colspan="1" rowspan="1" style="border-left-style:solid;border-left-width:0.5pt;border-left-color:black">
+                                                    <p>20kWth and above up to but not including 100kWth</p>
+                                                </td>
+                                                <td colspan="1" rowspan="1" style="border-left-style:solid;border-left-width:0.5pt;border-left-color:black">
+                                                    <p>1.7</p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="1" rowspan="1">
+                                                    <p>Medium Biomass (upper capacity)</p>
+                                                </td>
+                                                <td colspan="1" rowspan="1" style="border-left-style:solid;border-left-width:0.5pt;border-left-color:black">
+                                                    <p>As above</p>
+                                                </td>
+                                                <td colspan="1" rowspan="1" style="border-left-style:solid;border-left-width:0.5pt;border-left-color:black">
+                                                    <p>100kWth and above up to but not including 200kWth</p>
+                                                </td>
+                                                <td colspan="1" rowspan="1" style="border-left-style:solid;border-left-width:0.5pt;border-left-color:black">
+                                                    <p>1.2</p>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </tblock>
+                                </content>
+                            </hcontainer>
+                        </quotedStructure>
+                    </mod>
+                </p>
+            </content>
+        </hcontainer>
+    </hcontainer>
+</body>
+</act>
+</akomaNtoso>

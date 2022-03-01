@@ -1,0 +1,103 @@
+
+#
+# Copyright (C) Analytics Engines
+# 2021 Alastair McKinley (a.mckinley@analyticsengines.com)
+#
+
+---
+    services:
+      db:
+        env_file: .db.env
+        image: postgres-orp:13
+        volumes:
+          - ${BASE_DIR}/init:/docker-entrypoint-initdb.d/
+          - ${BASE_DIR}/ddl:/ddl/
+          - ${BASE_DIR}/demo_data:/demo_data/
+          - ${BASE_DIR}/tests:/tests/
+          - ${BASE_DIR}/setup:/setup/
+          - ${BASE_DIR}/python:/python/
+        environment:
+          SKIP_SETUP: ${SKIP_SETUP}
+          RUN_TESTS: ${RUN_TESTS}
+        ports:
+          - "5435:5432"
+        deploy:
+          restart_policy:
+            condition: none
+        command: [
+          'postgres',
+          '-c','log_statement=all',
+          '-c','shared_buffers=2GB',
+          '-c','work_mem=2GB',
+          '-c','maintenance_work_mem=1GB',
+          '-c','max_parallel_workers=4',
+          '-c','max_parallel_workers_per_gather=4',
+        ]
+      postgrest:
+        env_file: .postgrest.env
+        image: postgrest/postgrest:v8.0.0
+        ports:
+          - "3001:3000"
+      swagger-ui:
+        image: swaggerapi/swagger-ui
+        ports:
+          - "8082:8080"
+        environment:
+          API_URL: "http://localhost:3001/"
+      pgadmin:
+        env_file: .pgadmin.env
+        image: dpage/pgadmin4
+        ports:
+          - "80:80"
+      api:
+        image: consumer-api-orp
+        ports:
+          - 8000:80
+        environment:
+          DB_HOST: api-postgres
+          DB_USER: admin
+          DB_PASSWORD: admin
+          DJANGO_SETTINGS_MODULE: "orp_apps.settings.settings"
+          API_HOST: 'postgrest'
+          API_PORT: 3000
+        command: ["sh", "/app/etc/run_server.sh"]
+      api-postgres:
+        image: postgres:alpine
+        volumes:
+          - postgres-data:/var/lib/postgresql/data
+        environment:
+          - POSTGRES_USER=admin
+          - POSTGRES_PASSWORD=admin
+          - POSTGRES_DB=orp_api
+        ports:
+          - 5432:5432
+      editorial-ui:
+        image: editorial-ui-orp
+        ports:
+          - 8080:80
+      api-documentation:
+        image: api-documentation-orp
+        ports:
+          - 8088:80
+      graph-visualisation:
+        image: graph-visualisation-orp
+        ports:
+          - 8086:80
+      pg_amqp_bridge:
+        image: subzerocloud/pg-amqp-bridge:0.0.8
+        env_file: .bridge.env
+      rabbit:
+        image: rabbitmq:3.9.8-management
+        ports:
+          - "5671:5671"
+          - "5672:5672"
+          - "15672:15672"
+        volumes:
+          - ./rabbit_defs.json:/etc/rabbitmq/definitions.json
+          - ./rabbitmq.conf:/etc/rabbitmq/rabbitmq.conf
+      emailer:
+        image: orp-email-consumer:0.1
+        env_file: .emailer.env
+    volumes:
+      postgres-data:
+    version: "3.9"

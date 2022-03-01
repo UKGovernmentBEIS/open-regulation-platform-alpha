@@ -1,0 +1,36 @@
+
+###
+
+# @name editor_login
+POST http://127.0.0.1:3001/rpc/login
+Content-Type: application/json
+
+{
+    "email" : "editor@beis.gov.uk",
+    "password" : "Password1!"
+}
+
+###
+
+@editor_jwt = {{editor_login.response.body.$.signed_jwt}}
+
+# @name graph_search
+POST http://127.0.0.1:3001/rpc/graph_search
+Content-Type: application/json
+Accept: application/json
+Authorization: Bearer {{editor_jwt}}
+
+{
+    "filters" : [{
+        "operator" : "and",
+        "filter_elements" : [{
+            "document_metadata_category" : "title",
+            "websearch_tsquery" : "asbestos"
+        }]
+    }],
+    "relationship_names" : ["guidance_references_legislation"],
+    "metadata_categories" : ["title","classification"]
+}
+
+###
+

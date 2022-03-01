@@ -1,0 +1,29 @@
+{
+    "request": "GET https://stagingapi.beis-orp-alpha.io/api/1.0/event_subscription_stream",
+    "response": [
+        {
+          "event_description": {
+            "body": {
+              "document_pk": "/uksi/2002/618",
+              "document_revision": 1
+            },
+            "email": "editor@beis.gov.uk",
+            "action": "send_mail"
+          },
+          "event_name": "new_document_revision",
+          "created_on": "2021-12-20T15:29:38.620765"
+        },
+        {
+          "event_description": {
+            "body": {
+              "stale_document_pk": "Clinical investigations of medical devices – guidance for manufacturers",
+              "changed_document_pk": "/uksi/2002/618"
+            },
+            "email": "editor@beis.gov.uk",
+            "action": "send_mail"
+          },
+          "event_name": "stale_document_relationship",
+          "created_on": "2021-12-20T15:29:38.620765"
+        }
+      ]
+}

@@ -1,0 +1,603 @@
+<akomaNtoso xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0" xsi:schemaLocation="http://docs.oasis-open.org/legaldocml/ns/akn/3.0 http://docs.oasis-open.org/legaldocml/akn-core/v1.0/cos01/part2-specs/schemas/akomantoso30.xsd">
+    <act name="UnitedKingdomPublicGeneralAct">
+        <meta>
+            <identification source="#source">
+                <FRBRWork>
+                    <FRBRthis value="http://www.legislation.gov.uk/id/ukpga/2020/28"/>
+                    <FRBRuri value="http://www.legislation.gov.uk/id/ukpga/2020/28"/>
+                    <FRBRdate date="2020-12-17" name="enacted"/>
+                    <FRBRauthor href="http://www.legislation.gov.uk/id/legislature/UnitedKingdomParliament"/>
+                    <FRBRcountry value="GB-UKM"/>
+                    <FRBRnumber value="28"/>
+                    <FRBRname value="2020 c. 28"/>
+                    <FRBRprescriptive value="true"/>
+                </FRBRWork>
+                <FRBRExpression>
+                    <FRBRthis value="http://www.legislation.gov.uk/ukpga/2020/28/made"/>
+                    <FRBRuri value="http://www.legislation.gov.uk/ukpga/2020/28/made"/>
+                    <FRBRdate date="2020-12-17" name="enacted"/>
+                    <FRBRauthor href="#source"/>
+                    <FRBRlanguage language="eng"/>
+                </FRBRExpression>
+                <FRBRManifestation>
+                    <FRBRthis value="http://www.legislation.gov.uk/ukpga/2020/28/made/data.akn"/>
+                    <FRBRuri value="http://www.legislation.gov.uk/ukpga/2020/28/made/data.akn"/>
+                    <FRBRdate date="2021-07-25+01:00" name="transform"/>
+                    <FRBRauthor href="http://www.legislation.gov.uk"/>
+                    <FRBRformat value="application/akn+xml"/>
+                </FRBRManifestation>
+            </identification>
+            <lifecycle source="#source">
+                <eventRef date="2020-12-17" type="generation" eId="enacted-date" source="#source"/>
+                <eventRef date="2020-12-17" type="amendment" source="#source"/>
+            </lifecycle>
+            <references source="#source">
+                <TLCOrganization eId="source" href="http://www.legislation.gov.uk/id/publisher/KingsOrQueensPrinterOfActsOfParliament" showAs="Queen's Printer of Acts of Parliament"/>
+                <passiveRef href="http://www.legislation.gov.uk/id/uksi/2021/550" showAs="The Trade Act 2021 (Commencement No. 1 and Expiry Provision) Regulations 2021"/>
+            </references>
+            <proprietary xmlns:ukl="http://www.legislation.gov.uk/namespaces/legislation"
+                xmlns:ukm="http://www.legislation.gov.uk/namespaces/metadata"
+                xmlns:dc="http://purl.org/dc/elements/1.1/"
+                xmlns:dct="http://purl.org/dc/terms/"
+                xmlns:atom="http://www.w3.org/2005/Atom" source="#source">
+                <dc:identifier>http://www.legislation.gov.uk/ukpga/2020/28/made</dc:identifier>
+                <dc:title>Trade (Disclosure of Information) Act 2020</dc:title>
+                <dc:language>en</dc:language>
+                <dc:publisher>Queen's Printer of Acts of Parliament</dc:publisher>
+                <dc:modified>2020-12-18</dc:modified>
+                <atom:link rel="self" href="http://www.legislation.gov.uk/ukpga/2020/28/made/data.xml" type="application/xml"/>
+                <atom:link rel="http://www.legislation.gov.uk/def/navigation/resources" href="http://www.legislation.gov.uk/ukpga/2020/28/resources" title="More Resources"/>
+                <atom:link rel="http://www.legislation.gov.uk/def/navigation/act" href="http://www.legislation.gov.uk/ukpga/2020/28/made" title="whole act"/>
+                <atom:link rel="http://www.legislation.gov.uk/def/navigation/introduction" href="http://www.legislation.gov.uk/ukpga/2020/28/introduction/made" title="introduction"/>
+                <atom:link rel="http://www.legislation.gov.uk/def/navigation/body" href="http://www.legislation.gov.uk/ukpga/2020/28/body/made" title="body"/>
+                <atom:link rel="alternate" type="application/rdf+xml" href="http://www.legislation.gov.uk/ukpga/2020/28/made/data.rdf" title="RDF/XML"/>
+                <atom:link rel="alternate" type="application/akn+xml" href="http://www.legislation.gov.uk/ukpga/2020/28/made/data.akn" title="AKN"/>
+                <atom:link rel="alternate" type="application/xhtml+xml" href="http://www.legislation.gov.uk/ukpga/2020/28/made/data.xht" title="HTML snippet"/>
+                <atom:link rel="alternate" type="application/pdf" href="http://www.legislation.gov.uk/ukpga/2020/28/made/data.pdf" title="PDF"/>
+                <atom:link rel="alternate" type="application/akn+xhtml" href="http://www.legislation.gov.uk/ukpga/2020/28/made/data.html" title="HTML5 snippet"/>
+                <atom:link rel="alternate" href="http://www.legislation.gov.uk/ukpga/2020/28/pdfs/ukpga_20200028_en.pdf" type="application/pdf" title="Original PDF"/>
+                <atom:link rel="http://purl.org/dc/terms/tableOfContents" hreflang="en" href="http://www.legislation.gov.uk/ukpga/2020/28/contents/made" title="Table of Contents"/>
+                <atom:link rel="http://purl.org/dc/terms/hasVersion" href="http://www.legislation.gov.uk/ukpga/2020/28/2020-12-17" title="2020-12-17"/>
+                <atom:link rel="http://purl.org/dc/terms/hasVersion" href="http://www.legislation.gov.uk/ukpga/2020/28" title="current"/>
+                <ukm:PrimaryMetadata>
+                    <ukm:DocumentClassification>
+                        <ukm:DocumentCategory Value="primary"/>
+                        <ukm:DocumentMainType Value="UnitedKingdomPublicGeneralAct"/>
+                        <ukm:DocumentStatus Value="final"/>
+                    </ukm:DocumentClassification>
+                    <ukm:Year Value="2020"/>
+                    <ukm:Number Value="28"/>
+                    <ukm:EnactmentDate Date="2020-12-17"/>
+                    <ukm:ISBN Value="9780105700982"/>
+                    <ukm:UnappliedEffects>
+                        <ukm:UnappliedEffect EffectId="key-ac5420d918b7a9b2663542b5ab70f606" AffectedURI="http://www.legislation.gov.uk/id/ukpga/2020/28" AffectedClass="UnitedKingdomPublicGeneralAct" AffectingURI="http://www.legislation.gov.uk/id/uksi/2021/550" AffectingClass="UnitedKingdomStatutoryInstrument" URI="http://www.legislation.gov.uk/id/effect/uksi-2021-550-6af9hom4-79" Row="79" Type="expires" RequiresApplied="true" AffectedProvisions="s. 1" Comments="Editor: do a normal repeal at P1para level and dotty line text" AffectingEffectsExtent="E+W+S+NI" AffectingYear="2021" AffectingNumber="550" AffectingProvisions="reg. 5(a)" AffectedYear="2020" AffectedNumber="28" Created="2021-05-14T10:06:23Z" Modified="2021-05-14T10:06:23Z">
+                            <ukm:AffectedTitle>Trade (Disclosure of Information) Act 2020</ukm:AffectedTitle>
+                            <ukm:AffectedProvisions>
+                                <ukm:Section Ref="section-1" URI="http://www.legislation.gov.uk/id/ukpga/2020/28/section/1">s. 1</ukm:Section>
+                            </ukm:AffectedProvisions>
+                            <ukm:AffectingTitle>The Trade Act 2021 (Commencement No. 1 and Expiry Provision) Regulations 2021</ukm:AffectingTitle>
+                            <ukm:AffectingProvisions>
+                                <ukm:Section Ref="regulation-5-a" URI="http://www.legislation.gov.uk/id/uksi/2021/550/regulation/5/a">reg. 5(a)</ukm:Section>
+                            </ukm:AffectingProvisions>
+                            <ukm:InForceDates>
+                                <ukm:InForce Applied="false" Date="2021-06-30" Qualification="wholly in force"/>
+                            </ukm:InForceDates>
+                        </ukm:UnappliedEffect>
+                        <ukm:UnappliedEffect EffectId="key-3fc1fdaa99b15d92b6180a43f2beb50b" AffectedURI="http://www.legislation.gov.uk/id/ukpga/2020/28" AffectedClass="UnitedKingdomPublicGeneralAct" AffectingURI="http://www.legislation.gov.uk/id/uksi/2021/550" AffectingClass="UnitedKingdomStatutoryInstrument" URI="http://www.legislation.gov.uk/id/effect/uksi-2021-550-6af9hom4-80" Row="80" Type="expires" RequiresApplied="true" AffectedProvisions="s. 2" Comments="Editor: do a normal repeal at P1para level and dotty line text" AffectingEffectsExtent="E+W+S+NI" AffectingYear="2021" AffectingNumber="550" AffectingProvisions="reg. 5(b)" AffectedYear="2020" AffectedNumber="28" Created="2021-05-14T10:06:23Z" Modified="2021-05-14T10:06:23Z">
+                            <ukm:AffectedTitle>Trade (Disclosure of Information) Act 2020</ukm:AffectedTitle>
+                            <ukm:AffectedProvisions>
+                                <ukm:Section Ref="section-2" URI="http://www.legislation.gov.uk/id/ukpga/2020/28/section/2">s. 2</ukm:Section>
+                            </ukm:AffectedProvisions>
+                            <ukm:AffectingTitle>The Trade Act 2021 (Commencement No. 1 and Expiry Provision) Regulations 2021</ukm:AffectingTitle>
+                            <ukm:AffectingProvisions>
+                                <ukm:Section Ref="regulation-5-b" URI="http://www.legislation.gov.uk/id/uksi/2021/550/regulation/5/b">reg. 5(b)</ukm:Section>
+                            </ukm:AffectingProvisions>
+                            <ukm:InForceDates>
+                                <ukm:InForce Applied="false" Date="2021-06-30" Qualification="wholly in force"/>
+                            </ukm:InForceDates>
+                        </ukm:UnappliedEffect>
+                        <ukm:UnappliedEffect EffectId="key-4cc94467fb56d5f9b8c2a2305c6132d4" AffectedURI="http://www.legislation.gov.uk/id/ukpga/2020/28" AffectedClass="UnitedKingdomPublicGeneralAct" AffectingURI="http://www.legislation.gov.uk/id/uksi/2021/550" AffectingClass="UnitedKingdomStatutoryInstrument" URI="http://www.legislation.gov.uk/id/effect/uksi-2021-550-6af9hom4-81" Row="81" Type="expires" RequiresApplied="true" AffectedProvisions="s. 3" Comments="Editor: do a normal repeal at P1para level and dotty line text" AffectingEffectsExtent="E+W+S+NI" AffectingYear="2021" AffectingNumber="550" AffectingProvisions="reg. 5(c)" AffectedYear="2020" AffectedNumber="28" Created="2021-05-14T10:06:23Z" Modified="2021-05-14T10:06:23Z">
+                            <ukm:AffectedTitle>Trade (Disclosure of Information) Act 2020</ukm:AffectedTitle>
+                            <ukm:AffectedProvisions>
+                                <ukm:Section Ref="section-3" URI="http://www.legislation.gov.uk/id/ukpga/2020/28/section/3">s. 3</ukm:Section>
+                            </ukm:AffectedProvisions>
+                            <ukm:AffectingTitle>The Trade Act 2021 (Commencement No. 1 and Expiry Provision) Regulations 2021</ukm:AffectingTitle>
+                            <ukm:AffectingProvisions>
+                                <ukm:Section Ref="regulation-5-c" URI="http://www.legislation.gov.uk/id/uksi/2021/550/regulation/5/c">reg. 5(c)</ukm:Section>
+                            </ukm:AffectingProvisions>
+                            <ukm:InForceDates>
+                                <ukm:InForce Applied="false" Date="2021-06-30" Qualification="wholly in force"/>
+                            </ukm:InForceDates>
+                        </ukm:UnappliedEffect>
+                    </ukm:UnappliedEffects>
+                </ukm:PrimaryMetadata>
+                <ukm:Alternatives>
+                    <ukm:Alternative URI="http://www.legislation.gov.uk/ukpga/2020/28/pdfs/ukpga_20200028_en.pdf" Date="2020-12-18" Size="370422"/>
+                </ukm:Alternatives>
+                <ukm:Statistics>
+                    <ukm:TotalParagraphs Value="6"/>
+                    <ukm:BodyParagraphs Value="6"/>
+                    <ukm:ScheduleParagraphs Value="0"/>
+                    <ukm:AttachmentParagraphs Value="0"/>
+                    <ukm:TotalImages Value="0"/>
+                </ukm:Statistics>
+            </proprietary>
+        </meta>
+        <preface>
+            <p class="title">
+                <shortTitle>Trade (Disclosure of Information) Act 2020</shortTitle>
+            </p>
+            <p class="number">
+                <docNumber>2020 Chapter 28</docNumber>
+            </p>
+            <longTitle>
+                <p>An Act to make provision about the disclosure of information relating to trade. </p>
+            </longTitle>
+            <p class="DateOfEnactment">
+                <docDate date="2020-12-17">[17th December 2020]</docDate>
+            </p>
+        </preface>
+        <preamble>
+            <formula name="EnactingText">
+                <p>B<inline name="smallCaps" style="font-variant:small-caps">e it enacted</inline> by the Queen’s most Excellent Majesty, by and with the advice and consent of the Lords Spiritual and Temporal, and Commons, in this present Parliament assembled, and by the authority of the same, as follows:—</p>
+            </formula>
+        </preamble>
+        <body>
+            <section eId="section-1">
+                <num>1</num>
+                <heading>Trade functions: disclosure of information by HMRC</heading>
+                <subsection eId="section-1-1">
+                    <num>1</num>
+                    <intro>
+                        <p>Her Majesty’s Revenue and Customs (or anyone acting on their behalf) may disclose information for the purpose of—</p>
+                    </intro>
+                    <paragraph eId="section-1-1-a">
+                        <num>a</num>
+                        <content>
+                            <p>facilitating the exercise by a Minister of the Crown of the Minister’s functions relating to trade,</p>
+                        </content>
+                    </paragraph>
+                    <paragraph eId="section-1-1-b">
+                        <num>b</num>
+                        <content>
+                            <p>facilitating the exercise by a devolved authority of the authority’s functions relating to trade, or</p>
+                        </content>
+                    </paragraph>
+                    <paragraph eId="section-1-1-c">
+                        <num>c</num>
+                        <content>
+                            <p>facilitating the exercise by an international organisation or authority, or by any other body, of its public functions relating to trade.</p>
+                        </content>
+                    </paragraph>
+                </subsection>
+                <subsection eId="section-1-2">
+                    <num>2</num>
+                    <intro>
+                        <p>Those functions include, among other things, functions relating to—</p>
+                    </intro>
+                    <paragraph eId="section-1-2-a">
+                        <num>a</num>
+                        <content>
+                            <p>the analysis of the flow of traffic, goods and services into and out of the United Kingdom;</p>
+                        </content>
+                    </paragraph>
+                    <paragraph eId="section-1-2-b">
+                        <num>b</num>
+                        <content>
+                            <p>the analysis of the impact, or likely impact, of measures or practices relating to imports, exports, border security and transport on such flow;</p>
+                        </content>
+                    </paragraph>
+                    <paragraph eId="section-1-2-c">
+                        <num>c</num>
+                        <content>
+                            <p>the design, implementation and operation of such measures or practices.</p>
+                        </content>
+                    </paragraph>
+                </subsection>
+                <subsection eId="section-1-3">
+                    <num>3</num>
+                    <intro>
+                        <p>A person who receives information as a result of this section may not—</p>
+                    </intro>
+                    <paragraph eId="section-1-3-a">
+                        <num>a</num>
+                        <content>
+                            <p>use the information for a purpose other than one mentioned in subsection <a href="#section-1-1">(1)</a>, or</p>
+                        </content>
+                    </paragraph>
+                    <paragraph eId="section-1-3-b">
+                        <num>b</num>
+                        <content>
+                            <p>further disclose the information,</p>
+                        </content>
+                    </paragraph>
+                    <wrapUp>
+                        <p>except with the consent of the Commissioners for Her Majesty’s Revenue and Customs (which may be general or specific).</p>
+                    </wrapUp>
+                </subsection>
+                <subsection eId="section-1-4">
+                    <num>4</num>
+                    <intro>
+                        <p>If—</p>
+                    </intro>
+                    <paragraph eId="section-1-4-a">
+                        <num>a</num>
+                        <content>
+                            <p>a person discloses information in contravention of subsection <a href="#section-1-3-b">(3)(b)</a>, and</p>
+                        </content>
+                    </paragraph>
+                    <paragraph eId="section-1-4-b">
+                        <num>b</num>
+                        <content>
+                            <p>the information relates to a person whose identity is specified in, or can be deduced from, the disclosure,</p>
+                        </content>
+                    </paragraph>
+                    <wrapUp>
+                        <p>section 19 of the Commissioners for Revenue and Customs Act 2005 (offence of wrongful disclosure) applies in relation to that disclosure as it applies in relation to a disclosure of information in contravention of section 20(9) of that Act.</p>
+                    </wrapUp>
+                </subsection>
+                <subsection eId="section-1-5">
+                    <num>5</num>
+                    <content>
+                        <p>Nothing in this section limits the circumstances in which information may be disclosed under section 18(2) of the Commissioners for Revenue and Customs Act 2005 or under any other enactment or rule of law.</p>
+                    </content>
+                </subsection>
+                <subsection eId="section-1-6">
+                    <num>6</num>
+                    <intro>
+                        <p>Nothing in this section authorises the making of a disclosure which would—</p>
+                    </intro>
+                    <paragraph eId="section-1-6-a">
+                        <num>a</num>
+                        <content>
+                            <p>contravene the data protection legislation, or</p>
+                        </content>
+                    </paragraph>
+                    <paragraph eId="section-1-6-b">
+                        <num>b</num>
+                        <content>
+                            <p>be prohibited by the investigatory powers legislation.</p>
+                        </content>
+                    </paragraph>
+                    <wrapUp>
+                        <p>In determining whether a disclosure would do either of those things, the powers conferred by this section are to be taken into account.</p>
+                    </wrapUp>
+                </subsection>
+                <subsection eId="section-1-7">
+                    <num>7</num>
+                    <intro>
+                        <p>In this section “devolved authority” means—</p>
+                    </intro>
+                    <paragraph eId="section-1-7-a">
+                        <num>a</num>
+                        <content>
+                            <p>the Scottish Ministers,</p>
+                        </content>
+                    </paragraph>
+                    <paragraph eId="section-1-7-b">
+                        <num>b</num>
+                        <content>
+                            <p>the Welsh Ministers, or</p>
+                        </content>
+                    </paragraph>
+                    <paragraph eId="section-1-7-c">
+                        <num>c</num>
+                        <content>
+                            <p>a Northern Ireland department.</p>
+                        </content>
+                    </paragraph>
+                </subsection>
+            </section>
+            <section eId="section-2">
+                <num>2</num>
+                <heading>Trade functions: disclosure of information by other authorities</heading>
+                <subsection eId="section-2-1">
+                    <num>1</num>
+                    <content>
+                        <p>A public authority specified in subsection <a href="#section-2-3">(3)</a> may disclose information for the purpose of facilitating the exercise by a Minister of the Crown of the Minister’s functions relating to trade.</p>
+                    </content>
+                </subsection>
+                <subsection eId="section-2-2">
+                    <num>2</num>
+                    <intro>
+                        <p>Those functions include, among other things, functions relating to—</p>
+                    </intro>
+                    <paragraph eId="section-2-2-a">
+                        <num>a</num>
+                        <content>
+                            <p>the analysis of the flow of traffic, goods and services into and out of the United Kingdom;</p>
+                        </content>
+                    </paragraph>
+                    <paragraph eId="section-2-2-b">
+                        <num>b</num>
+                        <content>
+                            <p>the analysis of the impact, or likely impact, of measures or practices relating to imports, exports, border security and transport on such flow;</p>
+                        </content>
+                    </paragraph>
+                    <paragraph eId="section-2-2-c">
+                        <num>c</num>
+                        <content>
+                            <p>the design, implementation and operation of such measures or practices.</p>
+                        </content>
+                    </paragraph>
+                </subsection>
+                <subsection eId="section-2-3">
+                    <num>3</num>
+                    <intro>
+                        <p>The specified public authorities are—</p>
+                    </intro>
+                    <paragraph eId="section-2-3-a">
+                        <num>a</num>
+                        <content>
+                            <p>the Secretary of State;</p>
+                        </content>
+                    </paragraph>
+                    <paragraph eId="section-2-3-b">
+                        <num>b</num>
+                        <content>
+                            <p>the Minister for the Cabinet Office;</p>
+                        </content>
+                    </paragraph>
+                    <paragraph eId="section-2-3-c">
+                        <num>c</num>
+                        <content>
+                            <p>a strategic highways company appointed under section 1 of the Infrastructure Act 2015;</p>
+                        </content>
+                    </paragraph>
+                    <paragraph eId="section-2-3-d">
+                        <num>d</num>
+                        <content>
+                            <p>a port health authority constituted under section 2 of the Public Health (Control of Disease) Act 1984.</p>
+                        </content>
+                    </paragraph>
+                </subsection>
+                <subsection eId="section-2-4">
+                    <num>4</num>
+                    <content>
+                        <p>A person who receives information as a result of this section may only use the information for the purpose of facilitating the exercise by a public authority of the authority’s functions relating to trade (which include, among other things, functions of a kind referred to in subsection <a href="#section-2-2">(2)</a>).
+                        </p>
+                    </content>
+                </subsection>
+                <subsection eId="section-2-5">
+                    <num>5</num>
+                    <content>
+                        <p>A person who receives information as a result of this section may further disclose the information, but only with the consent of the public authority that disclosed the information under subsection <a href="#section-2-1">(1)</a> (which may be general or specific).</p>
+                    </content>
+                </subsection>
+                <subsection eId="section-2-6">
+                    <num>6</num>
+                    <content>
+                        <p>Nothing in this section limits the circumstances in which information may be disclosed under any other enactment or rule of law.</p>
+                    </content>
+                </subsection>
+                <subsection eId="section-2-7">
+                    <num>7</num>
+                    <intro>
+                        <p>A disclosure under this section does not breach—</p>
+                    </intro>
+                    <paragraph eId="section-2-7-a">
+                        <num>a</num>
+                        <content>
+                            <p>any obligation of confidence owed by the person disclosing the information, or</p>
+                        </content>
+                    </paragraph>
+                    <paragraph eId="section-2-7-b">
+                        <num>b</num>
+                        <content>
+                            <p>any other restriction on the disclosure of information (however imposed).</p>
+                        </content>
+                    </paragraph>
+                </subsection>
+                <subsection eId="section-2-8">
+                    <num>8</num>
+                    <intro>
+                        <p>But nothing in this section authorises the making of a disclosure which would—</p>
+                    </intro>
+                    <paragraph eId="section-2-8-a">
+                        <num>a</num>
+                        <content>
+                            <p>contravene the data protection legislation, or</p>
+                        </content>
+                    </paragraph>
+                    <paragraph eId="section-2-8-b">
+                        <num>b</num>
+                        <content>
+                            <p>be prohibited by the investigatory powers legislation.</p>
+                        </content>
+                    </paragraph>
+                    <wrapUp>
+                        <p>In determining whether a disclosure would do either of those things, the powers conferred by this section are to be taken into account.</p>
+                    </wrapUp>
+                </subsection>
+                <subsection eId="section-2-9">
+                    <num>9</num>
+                    <content>
+                        <p>A Minister of the Crown may by regulations made by statutory instrument amend this section for the purpose of specifying a public authority in, or removing a public authority from, subsection <a href="#section-2-3">(3)</a>.
+                        </p>
+                    </content>
+                </subsection>
+                <subsection eId="section-2-10">
+                    <num>10</num>
+                    <content>
+                        <p>A statutory instrument containing regulations under subsection <a href="#section-2-9">(9)</a> (whether alone or with other provision) may not be made unless a draft of the instrument has been laid before, and approved by a resolution of, each House of Parliament.</p>
+                    </content>
+                </subsection>
+                <subsection eId="section-2-11">
+                    <num>11</num>
+                    <content>
+                        <p>In this section “public authority” means an authority exercising functions of a public nature.</p>
+                    </content>
+                </subsection>
+            </section>
+            <section eId="section-3">
+                <num>3</num>
+                <heading>Offence relating to disclosure under section 2</heading>
+                <subsection eId="section-3-1">
+                    <num>1</num>
+                    <intro>
+                        <p>If a person discloses information in contravention of section 2 which relates to a person whose identity—</p>
+                    </intro>
+                    <paragraph eId="section-3-1-a">
+                        <num>a</num>
+                        <content>
+                            <p>is specified in the disclosure, or</p>
+                        </content>
+                    </paragraph>
+                    <paragraph eId="section-3-1-b">
+                        <num>b</num>
+                        <content>
+                            <p>can be deduced from it,</p>
+                        </content>
+                    </paragraph>
+                    <wrapUp>
+                        <p>the person who disclosed the information commits an offence.</p>
+                    </wrapUp>
+                </subsection>
+                <subsection eId="section-3-2">
+                    <num>2</num>
+                    <intro>
+                        <p>It is a defence for a person charged with an offence under this section to prove that the person reasonably believed—</p>
+                    </intro>
+                    <paragraph eId="section-3-2-a">
+                        <num>a</num>
+                        <content>
+                            <p>that the disclosure was lawful, or</p>
+                        </content>
+                    </paragraph>
+                    <paragraph eId="section-3-2-b">
+                        <num>b</num>
+                        <content>
+                            <p>that the information had already lawfully been made available to the public.</p>
+                        </content>
+                    </paragraph>
+                </subsection>
+                <subsection eId="section-3-3">
+                    <num>3</num>
+                    <intro>
+                        <p>A prosecution for an offence under this section—</p>
+                    </intro>
+                    <paragraph eId="section-3-3-a">
+                        <num>a</num>
+                        <content>
+                            <p>may be brought in England and Wales only with the consent of the Director of Public Prosecutions;</p>
+                        </content>
+                    </paragraph>
+                    <paragraph eId="section-3-3-b">
+                        <num>b</num>
+                        <content>
+                            <p>may be brought in Northern Ireland only with the consent of the Director of Public Prosecutions for Northern Ireland.</p>
+                        </content>
+                    </paragraph>
+                </subsection>
+                <subsection eId="section-3-4">
+                    <num>4</num>
+                    <intro>
+                        <p>A person guilty of an offence under this section is liable—</p>
+                    </intro>
+                    <paragraph eId="section-3-4-a">
+                        <num>a</num>
+                        <content>
+                            <p>on conviction on indictment, to imprisonment for a term not exceeding two years, to a fine or to both, or</p>
+                        </content>
+                    </paragraph>
+                    <paragraph eId="section-3-4-b">
+                        <num>b</num>
+                        <intro>
+                            <p>on summary conviction—</p>
+                        </intro>
+                        <subparagraph eId="section-3-4-b-i">
+                            <num>i</num>
+                            <content>
+                                <p>in England and Wales, to imprisonment for a term not exceeding 12 months, to a fine or to both;</p>
+                            </content>
+                        </subparagraph>
+                        <subparagraph eId="section-3-4-b-ii">
+                            <num>ii</num>
+                            <content>
+                                <p>in Scotland, to imprisonment for a term not exceeding 12 months, to a fine not exceeding the statutory maximum or to both;</p>
+                            </content>
+                        </subparagraph>
+                        <subparagraph eId="section-3-4-b-iii">
+                            <num>iii</num>
+                            <content>
+                                <p>in Northern Ireland, to imprisonment for a term not exceeding 6 months, to a fine not exceeding the statutory maximum or to both.</p>
+                            </content>
+                        </subparagraph>
+                    </paragraph>
+                </subsection>
+                <subsection eId="section-3-5">
+                    <num>5</num>
+                    <content>
+                        <p>In relation to an offence committed before the commencement of paragraph 24(2) of Schedule 22 to the Sentencing Act 2020, the reference in subsection <a href="#section-3-4-b-i">(4)(b)(i)</a> to 12 months is to be read as a reference to 6 months.</p>
+                    </content>
+                </subsection>
+            </section>
+            <section eId="section-4">
+                <num>4</num>
+                <heading>Expiry of sections 1 to 3</heading>
+                <subsection eId="section-4-1">
+                    <num>1</num>
+                    <content>
+                        <p>Subsection <a href="#section-4-2">(2)</a> applies if, in the Session in which this Act is passed, an Act resulting from the Trade Bill is passed which contains provisions that, in the opinion of the Secretary of State, have the same effect as, or similar effect to, sections 1 to 3 (the “corresponding provisions”).</p>
+                    </content>
+                </subsection>
+                <subsection eId="section-4-2">
+                    <num>2</num>
+                    <content>
+                        <p>The Secretary of State must by regulations made by statutory instrument provide for sections 1 to 3 to expire at the time that the corresponding provisions come into force to any extent.</p>
+                    </content>
+                </subsection>
+                <subsection eId="section-4-3">
+                    <num>3</num>
+                    <content>
+                        <p>Regulations under this section may include transitional, transitory or saving provision.</p>
+                    </content>
+                </subsection>
+            </section>
+            <section eId="section-5">
+                <num>5</num>
+                <heading>Interpretation</heading>
+                <content>
+                    <p>In this Act—</p>
+                    <blockList class="unordered">
+                        <item>
+                            <p>“the data protection legislation” has the same meaning as in the Data Protection Act 2018 (see section 3 of that Act);</p>
+                        </item>
+                        <item>
+                            <p>“enactment” has the same meaning as in the European Union (Withdrawal Agreement) Act 2020 (see section 39 of that Act);</p>
+                        </item>
+                        <item>
+                            <p>“the investigatory powers legislation” means Parts 1 to 7 and Chapter 1 of Part 9 of the Investigatory Powers Act 2016;</p>
+                        </item>
+                        <item>
+                            <p>“Minister of the Crown” has the same meaning as in the Ministers of the Crown Act 1975.</p>
+                        </item>
+                    </blockList>
+                </content>
+            </section>
+            <section eId="section-6">
+                <num>6</num>
+                <heading>Extent, commencement and short title</heading>
+                <subsection eId="section-6-1">
+                    <num>1</num>
+                    <content>
+                        <p>This Act extends to England and Wales, Scotland and Northern Ireland.</p>
+                    </content>
+                </subsection>
+                <subsection eId="section-6-2">
+                    <num>2</num>
+                    <content>
+                        <p>This Act comes into force on the day on which it is passed.</p>
+                    </content>
+                </subsection>
+                <subsection eId="section-6-3">
+                    <num>3</num>
+                    <content>
+                        <p>This Act may be cited as the Trade (Disclosure of Information) Act 2020.</p>
+                    </content>
+                </subsection>
+            </section>
+        </body>
+    </act>
+</akomaNtoso>

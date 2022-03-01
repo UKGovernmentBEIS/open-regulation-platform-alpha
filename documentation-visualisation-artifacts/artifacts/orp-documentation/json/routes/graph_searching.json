@@ -1,0 +1,94 @@
+{
+    "request": "POST https://stagingapi.beis-orp-alpha.io/api/1.0/graph/",
+    "body": {
+        "filters": [
+          {
+            "operator": "and",
+            "filter_elements": [
+              {
+                "document_metadata_category": "title",
+                "websearch_tsquery": "asbestos"
+              }
+            ]
+          }
+        ],
+        "relationship_names" : ["guidance_references_legislation"],
+        "metadata_categories" : ["title","classification"]
+    },
+    "response": {
+        "edges": [
+            {
+                "data": {
+                    "id": 21,
+                    "stale": "False",
+                    "source": 439,
+                    "target": 315,
+                    "properties": {
+                        "guidance_references_legislation": "http://www.legislation.gov.uk/id/uksi/2010/2984"
+                    },
+                    "property_key": "guidance_references_legislation",
+                    "relationship_confirmation": {
+                        "user_id": null,
+                        "confirmed_on": null,
+                        "confirmation_status": null
+                    }
+                }
+            },
+            {
+                "data": {
+                    "id": 43,
+                    "stale": "False",
+                    "source": 437,
+                    "target": 383,
+                    "properties": {
+                        "guidance_references_legislation": "http://www.legislation.gov.uk/id/uksi/2012/632"
+                    },
+                    "property_key": "guidance_references_legislation",
+                    "relationship_confirmation": {
+                        "user_id": null,
+                        "confirmed_on": null,
+                        "confirmation_status": null
+                    }
+                }
+            }
+        ],
+        "nodes": [
+            {
+                "data": {
+                    "id": 315,
+                    "title": "The Merchant Shipping and Fishing Vessels (Health and Safety at Work) (Asbestos) Regulations 2010",
+                    "classification": "merchant shipping",
+                    "document_type_id": 1,
+                    "document_type_name": "legislation.gov.uk"
+                }
+            },
+            {
+                "data": {
+                    "id": 383,
+                    "title": "The Control of Asbestos Regulations 2012",
+                    "classification": "health and safety",
+                    "document_type_id": 1,
+                    "document_type_name": "legislation.gov.uk"
+                }
+            },
+            {
+                "data": {
+                    "id": 437,
+                    "title": "Managing and working with asbestos: Control of Asbestos Regulations 2012",
+                    "classification": "Asbestos",
+                    "document_type_id": 2,
+                    "document_type_name": "orpml"
+                }
+            },
+            {
+                "data": {
+                    "id": 439,
+                    "title": "The Merchant Shipping and Fishing Vessels (Health and Safety at Work) (Asbestos) Regulations 2010 ",
+                    "classification": "Asbestos",
+                    "document_type_id": 2,
+                    "document_type_name": "orpml"
+                }
+            }
+        ]
+    }
+}

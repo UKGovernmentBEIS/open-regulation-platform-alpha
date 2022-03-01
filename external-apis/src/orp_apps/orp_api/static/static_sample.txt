@@ -1,0 +1,2 @@
+Static files go in this directory. They will be served by Apache, and Django
+templates that refer to STATIC_URL should find them automatically.

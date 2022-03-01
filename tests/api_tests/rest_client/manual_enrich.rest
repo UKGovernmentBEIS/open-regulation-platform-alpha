@@ -1,0 +1,143 @@
+
+# Click to log in as the editor
+# @name editor_login
+POST http://127.0.0.1:3001/rpc/login
+Content-Type: application/json
+
+{
+    "email" : "editor@beis.gov.uk",
+    "password" : "Password1!"
+}
+
+###
+@editor_jwt = {{editor_login.response.body.$.signed_jwt}}
+
+# retrieve the enrichment_def for 'labelled stuff' which is a manual enrichment task (e.g. labelling)
+# @name enrichment_definition
+GET http://127.0.0.1:3001/enrichment_def
+    ?name=eq.labelled stuff
+Content-Type: application/json
+Authorization: Bearer {{editor_jwt}}
+Accept: application/vnd.pgrst.object+json
+
+###
+
+
+@enrichment_def_id = {{enrichment_definition.response.body.$.id}}
+
+###
+# Get the first ten documents that have zero enrichments for the 'labelled stuff' enrichment task
+# Range header defines the pagination
+# @name get_unenriched_docs
+
+POST http://127.0.0.1:3001/rpc/unenriched_docs
+    ?select=document_id:id,created_on,revision_number,primary_key:pk,created_on,revision_number,primary_key:pk,created_on,revision_number,primary_key:pk,document_type(id,name),related_documents:document_graph!document_id_a(document_id_b,relationship_properties),reverse_related_documents:document_graph!document_id_b(document_id_a,relationship_properties),document_metadata:document_metadata_view(data,category,name,distinct_metadata_id),document_enrichments:enrichment(id,data,extent,enrichment_def(id,name),enrichment_feedback(good,notes,user_info(first_name,last_name,email))))
+    &document_metadata_view.category=in.(title,longtitle,enacted,identification,classification,legislation_named_entities)
+Content-Type: application/json
+Authorization: Bearer {{editor_jwt}}
+Range-Unit: items
+Range: 0-9
+
+{
+    "enrichment_def_id" : {{enrichment_def_id}}
+}
+
+###
+
+# Get a single document id, related data from document_type,enrichments and enrichment feedback tables
+# Accept: application/vnd.pgrst.object+json ensures a single object returned as opposed to array of size 1
+# @name one_doc
+GET http://127.0.0.1:3001/document
+    ?select=document_id:id,created_on,revision_number,primary_key:pk,document_type(id,name),related_documents:document_graph!document_id_a(document_id_b,relationship_properties),reverse_related_documents:document_graph!document_id_b(document_id_a,relationship_properties),document_metadata:document_metadata_view(data,category,name,distinct_metadata_id),document_enrichments:enrichment(id,data,extent,enrichment_def(id,name),enrichment_feedback(good,notes,user_info(first_name,last_name,email))))
+    &id=eq.1
+    &document_metadata_view.category=in.(title,longtitle,enacted,identification,classification,legislation_named_entities)
+    &document_enrichments.data=neq.NULL
+Content-Type: application/json
+Accept: application/vnd.pgrst.object+json
+Authorization: Bearer {{editor_jwt}}
+
+###
+
+@document_id = {{get_unenriched_docs.response.body.$[0].document_id}}
+###
+
+# Insert a manual enrichment for the labelled stuff task
+# @name do_manual_enrichment
+POST http://127.0.0.1:3001/enrichment
+Content-Type: application/json
+Authorization: Bearer {{editor_jwt}}
+
+{
+    "document_id" : {{document_id}},
+    "enrichment_def_id" : {{enrichment_def_id}},
+    "extent" : {
+        "type" : "xml",
+        "sections" : [
+            {
+                "extent_start" : "/body/section[1]",
+                "extent_end" : "/body/section[1]",
+                "extent_char_start" : null,
+                "extent_char_end" : null
+            }
+        ]
+    },
+    "data" : "section1!"
+}
+
+###
+
+#
+# Get the first 10 documents that have any enrichments with outstanding feedback
+# @name get_docs_with_outstanding_feedback
+GET http://127.0.0.1:3001/docs_with_outstanding_feedback
+    ?select=document_id:id,created_on,revision_number,primary_key:pk,document_type(id,name),related_documents:document_graph!document_id_a(document_id_b,relationship_properties),reverse_related_documents:document_graph!document_id_b(document_id_a,relationship_properties),document_metadata:document_metadata_view(data,category,name,distinct_metadata_id),document_enrichments:enrichment(id,data,extent,enrichment_def(id,name),enrichment_feedback(good,notes,user_info(first_name,last_name,email))))
+    &document_metadata_view.category=in.(title,longtitle,enacted,identification,classification,legislation_named_entities)
+    &document_enrichments.data=neq.NULL
+Content-Type: application/json
+Authorization: Bearer {{editor_jwt}}
+Range-Unit: items
+Range: 0-9
+
+###
+
+@enrichment_id = {{get_docs_with_outstanding_feedback.response.body.$[0].document_enrichments[0].id}}
+
+# create a piece of feedback for the first enrichment on the first document
+# @name editor_feedback
+POST http://127.0.0.1:3001/enrichment_feedback
+Content-Type: application/json
+Accept: application/json
+Authorization: Bearer {{editor_jwt}}
+
+{
+    "enrichment_id" : {{enrichment_id}},
+    "good" : true,
+    "notes" : "some feedback notes"
+}
+
+###
+# retrieve the first document having inserted feedback
+# @name one_doc_post_enrichment_and_feedback
+GET http://127.0.0.1:3001/document
+    ?select=document_id:id,created_on,revision_number,primary_key:pk,document_type(id,name),related_documents:document_graph!document_id_a(document_id_b,relationship_properties),reverse_related_documents:document_graph!document_id_b(document_id_a,relationship_properties),document_metadata:document_metadata_view(data,category,name,distinct_metadata_id),document_enrichments:enrichment(id,data,extent,enrichment_def(id,name),enrichment_feedback(good,notes,user_info(first_name,last_name,email))))
+    &id=eq.1
+    &document_metadata_view.category=in.(title,longtitle,enacted,identification,classification,legislation_named_entities)
+Content-Type: application/json
+Accept: application/vnd.pgrst.object+json
+Authorization: Bearer {{editor_jwt}}
+
+###
+
+#
+# Get the first 10 documents that have all enrichments with completed feedback
+# @name get_docs_with_completed_feedback
+GET http://127.0.0.1:3001/docs_with_completed_feedback
+    ?select=document_id:id,created_on,revision_number,primary_key:pk,document_type(id,name),related_documents:document_graph!document_id_a(document_id_b,relationship_properties),reverse_related_documents:document_graph!document_id_b(document_id_a,relationship_properties),document_metadata:document_metadata_view(data,category,name,distinct_metadata_id),document_enrichments:enrichment(id,data,extent,enrichment_def(id,name),enrichment_feedback(good,notes,user_info(first_name,last_name,email)))
+    &document_metadata_view.category=in.(title,longtitle,enacted,identification,classification,legislation_named_entities)
+Content-Type: application/json
+Authorization: Bearer {{editor_jwt}}
+Range-Unit: items
+Range: 0-9
+
+###
+

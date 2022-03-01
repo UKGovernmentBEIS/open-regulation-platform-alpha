@@ -1,0 +1,133 @@
+{
+    "endpoints": [
+        "GET https://stagingapi.beis-orp-alpha.io/api/1.0/documents/",
+        "GET https://stagingapi.beis-orp-alpha.io/api/1.0/documents/{id}/"
+    ],
+    "all": {
+        "request": "GET https://stagingapi.beis-orp-alpha.io/api/1.0/documents/",
+        "response": {
+            "count": 53,
+            "next": "https://stagingapi.beis-orp-alpha.io/api/1.0/documents/?page=2",
+            "previous": null,
+            "results": [
+                {
+                    "document_id": 1,
+                    "document_metadata": [
+                        {
+                            "id": 1,
+                            "data": "",
+                            "name": "legislation_html",
+                            "document_metadata_definition_id": 1,
+                            "distinct_metadata_id": null
+                        }
+                    ],
+                    "document_enrichments": [
+                        {
+                            "id": 1,
+                            "data": "Lorem ipsum dolor...",
+                            "extent": {
+                                "type": "xml",
+                                "sections": [
+                                    {
+                                        "extent_start": "body...",
+                                        "extent_end": "body...",
+                                        "extent_char_start": null,
+                                        "extent_char_end": null
+                                    }
+                                ]
+                            },
+                            "enrichment_def": {
+                                "id": 2,
+                                "name": "deontic_language",
+                                "type": "text"
+                            },
+                            "enrichment_feedback": []
+                        }
+                    ],
+                    "entities": [
+                        {
+                            "id": 437,
+                            "data": "Lorem ipsum dolor",
+                            "name": "legislation_named_entities",
+                            "document_metadata_definition_id": 8,
+                            "distinct_metadata_id": 123,
+                            "url": "https://stagingapi.beis-orp-alpha.io/api/1.0/entities/123/"
+                        }
+                    ],
+                    "url": "https://stagingapi.beis-orp-alpha.io/api/1.0/documents/1/"
+                }
+            ]
+        }
+    },
+    "id": {
+		"request": "GET https://stagingapi.beis-orp-alpha.io/api/1.0/documents/{id}",
+		"response": {
+			"document_id": "{id}",
+			"document_type": {
+				"id": 1,
+				"name": "legislation.gov.uk"
+			},
+			"document_metadata": [
+				{
+					"id": 51,
+					"data": "Lorem ipsum dolor",
+					"name": "legislation_title",
+					"document_metadata_definition_id": 2,
+					"distinct_metadata_id": null
+				}   
+			],
+			"related_documents": [
+				{
+					"document_id_b": 75,
+					"relationship_properties": {
+						"same_named_entity": "Lorem ipsum dolor"
+					},
+					"url": "https://stagingapi.beis-orp-alpha.io/api/1.0/documents/75/"
+				}
+			],
+			"reverse_related_documents": [
+				{
+					"document_id_a": 12,
+					"relationship_properties": {
+						"cited_in": "Lorem ipsum dolor"
+					},
+					"url": "https://stagingapi.beis-orp-alpha.io/api/1.0/documents/12/"
+				}
+			],
+			"raw_text": "<akomaNtoso xmlns:xsi...",
+			"document_enrichments": [
+				{
+					"id": 1,
+					"data": "Lorem ipsum dolor",
+					"extent": {
+						"type": "xml",
+						"sections": [
+							{
+								"extent_start": "body...",
+								"extent_end": "body...",
+								"extent_char_start": null,
+								"extent_char_end": null
+							}
+						]
+					},
+					"enrichment_def": {
+						"id": 2,
+						"name": "deontic_language",
+						"type": "text"
+					},
+					"enrichment_feedback": []
+				}
+			],
+			"entities": [
+				{
+					"id": 437,
+					"data": "Lorem Ipsum",
+					"name": "dolor sit amet",
+					"document_metadata_definition_id": 8,
+					"distinct_metadata_id": 123,
+					"url": "https://stagingapi.beis-orp-alpha.io/api/1.0/entities/123/"
+				}
+			]
+		}
+    }
+}

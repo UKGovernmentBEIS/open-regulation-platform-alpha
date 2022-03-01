@@ -1,0 +1,2 @@
+#from .extractAuthorities import extract_entities_from_string
+from .new_extractAuthorities import extract_entities_from_string

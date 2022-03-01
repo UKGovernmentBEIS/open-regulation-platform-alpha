@@ -1,0 +1,21 @@
+version: '3.7'
+
+services:
+  postgres:
+    image: postgres:alpine
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_USER=admin
+      - POSTGRES_PASSWORD=admin
+      - POSTGRES_DB=orp_api
+    networks:
+      - backend
+    ports:
+      - 5432:5432
+
+networks:
+  backend:
+
+volumes:
+  postgres-data:

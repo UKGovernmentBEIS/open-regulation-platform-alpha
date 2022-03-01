@@ -1,0 +1,17 @@
+FROM postgres:13
+
+#
+# Copyright (C) Analytics Engines 2021
+# Alastair McKinley (a.mckinley@analyticsengines.com)
+#
+
+RUN apt update
+RUN apt -y install postgresql-plpython3-13 postgresql-13-pgtap python3 python3-dev python3-pip git wget npm
+RUN git clone https://github.com/michelp/pgjwt
+RUN cd /pgjwt && git checkout 0f1aa16ef17084aa669999ac60f489236c0ed2bc && make install
+RUN pip3 install xmljson xmltodict untangle rich lxml jsonschema==3.2.0
+RUN wget https://github.com/sharkdp/bat/releases/download/v0.18.3/bat_0.18.3_amd64.deb
+RUN dpkg -i bat_0.18.3_amd64.deb
+RUN git clone https://github.com/gavinwahl/postgres-json-schema.git
+RUN cd /postgres-json-schema && git checkout 570e19f5b2b4e6ff1414eebe2191e14c437760d9 && make install
+RUN npm -g install xslt3

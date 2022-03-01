@@ -1,0 +1,69 @@
+{
+    "request": "POST https://stagingapi.beis-orp-alpha.io/api/1.0/search/",
+    "body": {
+        "filters": [
+          {
+            "operator": "and",
+            "filter_elements": [
+              {
+                "document_metadata_category": "title",
+                "websearch_tsquery": "asbestos"
+              }
+            ]
+          }
+        ]
+    },
+    "response": {
+        "count": 53,
+        "next": null,
+        "previous": null,
+        "results": [
+            {
+                "document_id": 1,
+                "document_metadata": [
+                    {
+                        "id": 1,
+                        "data": "",
+                        "name": "legislation_html",
+                        "document_metadata_definition_id": 1,
+                        "distinct_metadata_id": null
+                    }
+                ],
+                "document_enrichments": [
+                    {
+                        "id": 1,
+                        "data": "Lorem ipsum dolor...",
+                        "extent": {
+                            "type": "xml",
+                            "sections": [
+                                {
+                                    "extent_start": "body...",
+                                    "extent_end": "body...",
+                                    "extent_char_start": null,
+                                    "extent_char_end": null
+                                }
+                            ]
+                        },
+                        "enrichment_def": {
+                            "id": 2,
+                            "name": "deontic_language",
+                            "type": "text"
+                        },
+                        "enrichment_feedback": []
+                    }
+                ],
+                "entities": [
+                    {
+                        "id": 437,
+                        "data": "Lorem ipsum dolor",
+                        "name": "legislation_named_entities",
+                        "document_metadata_definition_id": 8,
+                        "distinct_metadata_id": 123,
+                        "url": "https://stagingapi.beis-orp-alpha.io/api/1.0/entities/123/"
+                    }
+                ],
+                "url": "https://stagingapi.beis-orp-alpha.io/api/1.0/documents/1/"
+            }
+        ]
+    }
+}

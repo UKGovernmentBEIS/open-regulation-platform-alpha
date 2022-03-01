@@ -1,0 +1,11 @@
+FROM python:3.9.7-slim
+
+WORKDIR /usr/src/app
+COPY requirements.txt ./
+RUN pip install --no-cache-dir -r requirements.txt
+
+COPY *.py ./
+
+ENV RABBIT_PORT 5672
+
+CMD python -u email_consumer.py -H ${RABBIT_HOST} -q ${QUEUE} -u ${RABBIT_USER} -p ${RABBIT_PASS} -P ${RABBIT_PORT}
