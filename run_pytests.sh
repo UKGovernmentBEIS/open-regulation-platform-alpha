@@ -7,7 +7,7 @@ set -e
 temp_env_dir=$(mktemp -d)
 virtualenv ${py3_env} ${temp_env_dir} > /dev/null 2>&1
 source ${temp_env_dir}/bin/activate
-pip -q install pytest requests lxml arrow psycopg2
+pip -q install pytest requests lxml arrow psycopg2-binary
 
 i=0
 until http --quiet --quiet --check-status POST 127.0.0.1:3001/rpc/login email=editor@beis.gov.uk password=Password1\! 2>/dev/null
