@@ -22,13 +22,14 @@ do
 done
 
 green "stack is ready"
-
+sleep 20
 echo "running pytests"
 
-pytest tests/pytests
-pytest tests/api_tests/pytests
+
 pytest python/orp/orp/xmltools
 pytest python/orp/orp/content_enrichment
 pytest python/orp/orp/authority_ner
+pytest tests/api_tests/pytests
+pytest tests/pytests
 
 rm -r ${temp_env_dir}
