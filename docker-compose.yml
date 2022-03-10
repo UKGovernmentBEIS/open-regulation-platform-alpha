@@ -51,24 +51,15 @@
           - "80:80"
       api:
         image: consumer-api-orp
+        env_file: .api.env
         ports:
           - 8000:80
-        environment:
-          DB_HOST: api-postgres
-          DB_USER: admin
-          DB_PASSWORD: admin
-          DJANGO_SETTINGS_MODULE: "orp_apps.settings.settings"
-          API_HOST: 'postgrest'
-          API_PORT: 3000
         command: ["sh", "/app/etc/run_server.sh"]
       api-postgres:
         image: postgres:alpine
+        env_file: .api-postgres.env
         volumes:
           - postgres-data:/var/lib/postgresql/data
-        environment:
-          - POSTGRES_USER=admin
-          - POSTGRES_PASSWORD=admin
-          - POSTGRES_DB=orp_api
         ports:
           - 5432:5432
       editorial-ui:

@@ -30,7 +30,7 @@ create table jwt_secret (
     constraint one_row check (id)
 );
 
-insert into jwt_secret (secret) values ('2db2fc88ff5b094cf0c4a5b6815ce19a');
+insert into jwt_secret (secret) values (:'PGRST_JWT_SECRET');
 
 grant select on jwt_secret to orp_postgrest_anon;
 

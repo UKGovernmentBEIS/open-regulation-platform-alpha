@@ -18,7 +18,7 @@ run_scripts_in_dir() {
     for f in `find $1 -maxdepth 1 -type "f" -name "*.sql" | sort`
     do
         var_set=""
-        for psql_var in $(grep -Po "[^:]:'?[\w_]+'?" $f | perl -pe "s/:'?([\w_]+)'?/\1/" | sort -u)
+        for psql_var in $(grep -Po "[^:]:'?[\w_]+'?" $f | perl -pe 's/.*(:.*)/\1/' | perl -pe "s/:'?([\w_]+)'?/\1/" | sort -u)
         do
             echo "file $f needs psql_var $psql_var"
             var_set="${var_set} -v ${psql_var}=${!psql_var}"

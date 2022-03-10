@@ -7,7 +7,7 @@ set -e
 temp_env_dir=$(mktemp -d)
 virtualenv ${py3_env} ${temp_env_dir} > /dev/null 2>&1
 source ${temp_env_dir}/bin/activate
-pip -q install pytest requests lxml arrow psycopg2
+pip -q install pytest requests lxml arrow psycopg2-binary
 
 i=0
 until http --quiet --quiet --check-status POST 127.0.0.1:3001/rpc/login email=editor@beis.gov.uk password=Password1\! 2>/dev/null
@@ -22,13 +22,14 @@ do
 done
 
 green "stack is ready"
-
+sleep 20
 echo "running pytests"
 
-pytest tests/pytests
-pytest tests/api_tests/pytests
+
 pytest python/orp/orp/xmltools
 pytest python/orp/orp/content_enrichment
 pytest python/orp/orp/authority_ner
+pytest tests/api_tests/pytests
+pytest tests/pytests
 
 rm -r ${temp_env_dir}

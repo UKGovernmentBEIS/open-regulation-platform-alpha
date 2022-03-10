@@ -7,7 +7,10 @@
 docker pull postgres:13
 docker build -q -t postgres-orp:13 -f Dockerfile.pg .
 docker build -q -t consumer-api-orp:latest -f external-apis/Dockerfile external-apis
-docker build -q -t editorial-ui-orp:latest --build-arg API_BASE_URL=/ -f editorial-ui/Dockerfile editorial-ui
+# comment line below for local build
+docker build --no-cache -q -t editorial-ui-orp:latest --build-arg API_BASE_URL=/ -f editorial-ui/Dockerfile editorial-ui
+# uncomment below for local build
+# docker build --no-cache -q -t editorial-ui-orp:latest --build-arg API_BASE_URL=http://localhost:3001/ -f editorial-ui/Dockerfile editorial-ui
 docker pull subzerocloud/pg-amqp-bridge:0.0.8
 docker pull rabbitmq:3.9.8-management
 docker build -q -t postgres-orp:13 -f Dockerfile.pg .

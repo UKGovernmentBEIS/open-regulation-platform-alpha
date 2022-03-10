@@ -59,6 +59,11 @@ def test_document_revision_subscription(db_conn,editor_jwt,anon_jwt,base_url):
     with db_conn:
         with db_conn.cursor() as curs:
             curs.execute("""
+                delete from public_api.document where pk = '/uksi/2002/618' and latest is true and revision_number = 1;
+                delete from public_api.event;
+                delete from public_api.event_stream;
+            """)
+            curs.execute("""
                 select count(*) from public_api.document where pk = '/uksi/2002/618'
             """)
 
@@ -133,6 +138,8 @@ def test_document_revision_subscription(db_conn,editor_jwt,anon_jwt,base_url):
     with db_conn:
         with db_conn.cursor() as curs:
             curs.execute("""
-                delete from public_api.document where pk = '/uksi/2002/618' and latest is true
+                delete from public_api.document where pk = '/uksi/2002/618' and latest is true and revision_number = 1;
+                delete from public_api.event;
+                delete from public_api.event_stream;
             """)
     db_conn.close()
