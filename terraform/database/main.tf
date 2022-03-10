@@ -75,6 +75,10 @@ resource "aws_eip_association" "database_eip_association" {
 
 resource "aws_s3_bucket" "data_bucket" {
   bucket = "${var.base_name}-data"
+}
+
+resource "aws_s3_bucket_acl" "data_bucket_acl" {
+  bucket = aws_s3_bucket.data_bucket.id
   acl    = "private"
 }
 
