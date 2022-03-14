@@ -67,7 +67,7 @@ resource "null_resource" "git_checkout" {
     inline = [
       "chmod 400 ~/.ssh/id_rsa",
       "ssh-keyscan -t rsa github.com >> ~/.ssh/known_hosts",
-      "git clone git@github.com:analyticsengines/orp_alpha.git"
+      "git clone git@github.com:UKGovernmentBEIS/open-regulation-platform-alpha.git"
     ]
   }
 
