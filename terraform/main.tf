@@ -87,9 +87,9 @@ resource "null_resource" "deployment" {
 
   provisioner "remote-exec" {
     inline = [
-      "chmod +x ~/open_regulation_platform_alpha/api_demo/demo_installs.sh",
+      "chmod +x ~/open-regulation-platform-alpha/api_demo/demo_installs.sh",
       "sudo apt-get install -y python3-pip",
-      "cd open_regulation_platform__alpha",
+      "cd open-regulation-platform-alpha",
       "./deploy.sh"
     ]
   }
