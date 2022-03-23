@@ -44,7 +44,7 @@ Having installed the prerequisites and docker, simply run the deployment of the 
 
 For local docker deployments, in ```build.sh``` change ```--build-arg API_BASE_URL=/``` to ```--build-arg API_BASE_URL=http://localhost:3001/```.
 
-For AWS deployments, change the credentials in each of the container services ```*.env``` files to new values before deployment with ```./redeploy.sh```.
+For AWS deployments, change the credentials (in particular, the JWT token) in each of the container services ```*.env``` files to new values before deployment with ```./redeploy.sh```.
 
 To execute the tests run ```./redeploy_and_test.sh```.
 
